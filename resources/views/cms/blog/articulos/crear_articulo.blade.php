@@ -21,7 +21,6 @@
 
     <div>
         <ul style="display: none;" class="alert alert-danger" id="alert_container">
-          
         </ul>
     </div>
 

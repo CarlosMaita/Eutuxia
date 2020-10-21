@@ -27,7 +27,6 @@
           <th>Imagen</th>
           <th>Titulo</th>
           <th>Descripción</th>
-          <th>Contenido</th>
           <th>Categoria</th>
           <th>Acciones</th>
         </tr>
@@ -41,7 +40,6 @@
             </td>
             <td>{{$articulo->title}}</td>
             <td>{{$articulo->description}}</td>
-            <td>{{$articulo->content}}</td>
             <td>{{$articulo->category->title}}</td>
             <td class="d-flex ">
               <a href="{{route('blog.article.show', $articulo->id)}}"  class="btn btn-sm btn-outline-success mr-2 editar">Editar</a>
@@ -49,6 +47,7 @@
                 @csrf
                 <input type="submit" value="Eliminar" type="button" class="btn btn-sm btn-outline-danger">
               </form>
+              <a href="{{route('blog.show', $articulo->slug)}}" target="_black" class="btn btn-sm btn-outline-info mx-2">Ver articulo</a>
             </td>
           </tr>
         @endforeach

@@ -16,20 +16,26 @@ use App\Cms\Project;
 */
 
 Route::get('/cms', function () {
-	return view('cms.index');
-});
+	if (Auth::check()) {
+		// The user is logged in...
+		return view('cms.index');
+	}else{
+		return view('auth.login');
+	}
+})->name('login');
 
+Route::post('/login', 'LoginController@authenticate');
 
+Route::prefix('cms')->middleware('auth')->group(function () {
 
-Route::prefix('cms')->group(function () {
+	
 
 	//-------------- SERvICIOS ----------------
 	Route::get('/servicios', 'Cms\ServicioController@index')->name('service.home');
 	Route::get('/crear/servicio', 'Cms\ServicioController@crearServicio')->name('service.create');
 	Route::get('/editar/servicio/{id}', 'Cms\ServicioController@editarServicio')->name('service.show');
 
-
-		//metodos posts
+	//metodos posts
 
 	Route::post('/guardar/servicio', 'Cms\ServicioController@guardarServicio')->name('service.store');
 	Route::post('/actualizar/servicio/{id}', 'Cms\ServicioController@actualizarServicio')->name('service.update');
@@ -147,20 +153,21 @@ Route::prefix('cms')->group(function () {
 
 
 
-Route::get('/', 'HomeController@home');
+Route::get('/', 'MainController@home');
 
-Route::get('/contactanos', 'HomeController@contactanos')->name('contactanos');
+Route::get('/contactanos', 'MainController@contactanos')->name('contactanos');
 
 Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contacto.send');
 
-Route::get('/blog', 'HomeController@blog')->name('blog');
+Route::get('/blog', 'MainController@blog')->name('blog');
+Route::get('/blog/cat/{category_id}', 'MainController@blogCat')->name('blog.cat');
 
-Route::get('/blog/{id}', 'HomeController@blogDetail')->name('blog.show');
+Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show');
 
-Route::get('/productos/{id}', 'HomeController@productos')->name('product.option');
+Route::get('/productos/{id}', 'MainController@productos')->name('product.option');
 
 
-Route::get('/proyectos/{id}', 'HomeController@proyectos')->name('project.option');
+Route::get('/proyectos/{id}', 'MainController@proyectos')->name('project.option');
 
 
 Route::get('/servicios', function () {
@@ -170,7 +177,7 @@ Route::get('/servicios', function () {
     return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
 });
 
-Route::get('/servicios/{id}', 'HomeController@servicios')->name('service.option');
+Route::get('/servicios/{id}', 'MainController@servicios')->name('service.option');
 
 Route::get('/nosotros', function () {
 	$productos = Product::all();
@@ -185,3 +192,8 @@ Route::get('/servicios', function () {
 	$proyectos = Project::all();
     return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+

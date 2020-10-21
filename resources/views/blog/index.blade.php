@@ -28,7 +28,7 @@
           <li class="col-md-6">
             <article class="tile">
               <div class="tile-image" style="background-image: url({{asset('storage/'.$article->image)}})"></div>
-              <a href="{{route('blog.show', $article->id)}}" class="tile-content">
+              <a href="{{route('blog.show', $article->slug)}}" class="tile-content">
                 <div class="tile-footer">
                   <span class="eyebrow mb-1">{{$article->title}}}</span>
                   <h3>{{$article->description}}</h3>
@@ -44,7 +44,7 @@
           <span class="widget-title">Categorias</span>
           <div class="list-group list-group-categories">
             @foreach($categorias as $category)
-            <a href="" class="list-group-item d-flex justify-content-between align-items-center">
+          <a href="/blog/cat/{{$category->id}}" class="list-group-item d-flex justify-content-between align-items-center">
               {{$category->title}}
               <span class="badge">{{$category->articles->count()}}</span>
             </a>
@@ -56,7 +56,7 @@
           <ul class="feed">
             @foreach($recientes as $reciente)
             <li>
-              <a href="{{route('blog.show', $reciente->id)}}" class="feed-item">
+              <a href="{{route('blog.show', $reciente->slug)}}" class="feed-item">
                 <img src="{{asset('storage/'.$reciente->image)}}" alt="Image">
                 <div class="feed-item-content">
                   <h3>{{$reciente->title}}</h3>

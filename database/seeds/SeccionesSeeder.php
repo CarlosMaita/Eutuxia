@@ -13,16 +13,16 @@ class SeccionesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('sections')->insert([
-        	'section' => 'Productos',
-        ]);
+        // DB::table('sections')->insert([
+        // 	'section' => 'Productos',
+        // ]);
 
-        DB::table('sections')->insert([
-        	'section' => 'Servicios',
-        ]);
+        // DB::table('sections')->insert([
+        // 	'section' => 'Servicios',
+        // ]);
 
-        DB::table('sections')->insert([
-        	'section' => 'Proyectos',
-        ]);
+        // DB::table('sections')->insert([
+        // 	'section' => 'Proyectos',
+        // ]);
     }
 }

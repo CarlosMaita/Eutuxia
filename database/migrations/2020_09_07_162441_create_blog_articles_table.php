@@ -20,6 +20,7 @@ class CreateBlogArticlesTable extends Migration
             $table->text('content');
             $table->string('image');
             $table->foreignId('category_id');
+            $table->string('slug')->unique();
             $table->timestamps();
         });
     }

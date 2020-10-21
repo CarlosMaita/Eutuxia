@@ -39,13 +39,15 @@ class ArticleController extends Controller
     	$file = Str::replaceFirst('public/', '',$path);
 
     	$articulo = new BlogArticle;
+		$slug = Str::slug($request->title);
 
     	$articulo->create([
     		'title' => $request->title,
     		'description' => $request->description,
     		'content' => $request->content,
     		'category_id' => $request->category_id,
-    		'image' => $file,
+			'image' => $file,
+			'slug' => $slug,
     	]);
 
     	return back()->with('message', 'Articulo creado con éxito');
@@ -75,16 +77,13 @@ class ArticleController extends Controller
     		if(isset($deleted) || $article->image == null)
     		{
     			$path = $request->file('image')->store('public');
-
-    			$file = Str::replaceFirst('public/', '',$path);
-
-
-    			$article->update([
+				$file = Str::replaceFirst('public/', '',$path);
+				$article->update([
     				'title' => $request->title,
     				'description' => $request->description,
     				'content' => $request->content,
     				'category_id' => $request->category_id,
-    				'image' => $file,
+					'image' => $file,
     			]);
     		} else {
     			return back()->with('error', 'No se pudo actualizar el articulo');
@@ -96,7 +95,7 @@ class ArticleController extends Controller
     			'title' => $request->title,
     			'description' => $request->description,
     			'content' => $request->content,
-    			'category_id' => $request->category_id,
+				'category_id' => $request->category_id,
     		]);
     	}
 

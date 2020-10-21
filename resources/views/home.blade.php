@@ -409,47 +409,6 @@ $color_header='dark';
     </section>
     
     
-    <!-- news -->
-    {{-- <section id="news" class="bg-white section-decorated-bottom">
-      
-      <div class="container">
-        <div class="row">
-          <div class="col text-center">
-            <h2>Ultimas Noticias</h2>
-          </div>
-        </div>
-        <div class="row gutter-2">
-
-          @foreach ($articulos as $articulo)
-          <div class="col-md-6 col-lg-4">
-            <article class="tile">
-              <div class="tile-image" style="background-image: url({{asset('storage/'.$articulo->image)}})"></div>
-              <div class="tile-content">
-                <div class="tile-header">
-                  <span class="eyebrow mb-1">{{$articulo->category->title}}</span>
-                  <h3>{{$articulo->title}}</h3>
-                </div>
-                <div class="tile-footer">
-                  <a class="btn btn-ico btn-outline-white btn-rounded"  href="{{route('blog.show', $articulo->id)}}" >
-                    <i class="icon-arrow-right2 fs-20"></i>
-                  </a>
-                </div>
-              </div>
-            </article>
-          </div>
-          @endforeach
-
-        </div>
-        <div class="row">
-          <div class="col text-center">
-            <a href="" class="btn btn-outline-primary btn-rounded px-5">View All</a>
-          </div>
-        </div>
-      </div>
-    </section> --}}
-    <!-- / news -->
-
-
      <!-- about -->
      <section class="bg-light pb-0">
       <div class="container">
@@ -522,8 +481,6 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius quam odit volupta
       </div>
     </section>
     <!-- / about -->
-
-
 
 
 

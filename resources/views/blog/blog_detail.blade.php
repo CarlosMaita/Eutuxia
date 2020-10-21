@@ -1,7 +1,24 @@
 @extends('common.main_plantilla')
 
 @section('title')
-<title>Blog</title>
+<!-- Primary Meta Tags -->
+<title>Blog — {{$articulo->title}}</title>
+<meta name="title" content="Blog — {{$articulo->title}}">
+<meta name="description" content="{{$articulo->description}}">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{Request::path()}}">
+<meta property="og:title" content="Blog — {{$articulo->title}}">
+<meta property="og:description" content="{{$articulo->description}}">
+<meta property="og:image" content="{{asset('storage/'.$articulo->image)}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{Request::path()}}">
+<meta property="twitter:title" content="Blog — {{$articulo->title}}">
+<meta property="twitter:description" content="{{$articulo->description}}">
+<meta property="twitter:image" content="{{asset('storage/'.$articulo->image)}}">
 @endsection
 
 
@@ -12,14 +29,14 @@
     data-top-top="transform: translateY(0px);" 
     data-top-bottom="transform: translateY(250px);">
     <div class="swiper-wrapper">
-      <div class="swiper-slide vh-100">
+      <div class="swiper-slide vh-60">
         <div class="image image-overlay image-zoom" style="background-image:url({{asset('storage/'.$articulo->image)}})"></div>
         <div class="caption">
           <div class="container">
-            <div class="row align-items-center vh-100">
+            <div class="row align-items-center vh-60">
               <div class="col-md-8" data-swiper-parallax-y="-250%">
                 <span class="eyebrow mb-2">{{$articulo->category->title}}</span>
-                <h1 class="display-2">{{$articulo->title}}</h1>
+                <h1 class="display-3">{{$articulo->title}}</h1>
               </div>
             </div>
           </div>
@@ -41,10 +58,10 @@
 
 
 
-<section>
+<main>
   <div class="container">
     <div class="row justify-content-center">
-      <div class="col-md-10 col-lg-8">
+      <div class="col-md-10 col-lg-8 p-2">
         {!! $articulo->content !!}
       </div>
     </div>
@@ -79,7 +96,7 @@
       </div>
     </div>
   </div> -->
-</section>
+</main>
 
 
 
@@ -96,7 +113,7 @@
       <div class="col-md-6 col-lg-4">
         <article class="tile">
           <div class="tile-image" style="background-image: url({{asset('storage/'.$reciente->image)}})"></div>
-          <a href="{{route('blog.show', $reciente->id)}}" class="tile-content">
+          <a href="{{route('blog.show', $reciente->slug)}}" class="tile-content">
             <div class="tile-header">
               <span class="eyebrow mb-1">{{$reciente->title}}</span>
               <h3>{{$reciente->description}}</h3>
