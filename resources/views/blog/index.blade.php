@@ -30,7 +30,7 @@
               <div class="tile-image" style="background-image: url({{asset('storage/'.$article->image)}})"></div>
               <a href="{{route('blog.show', $article->slug)}}" class="tile-content">
                 <div class="tile-footer">
-                  <span class="eyebrow mb-1">{{$article->title}}}</span>
+                  <span class="eyebrow mb-1">{{$article->title}}</span>
                   <h3>{{$article->description}}</h3>
                 </div>
               </a>
