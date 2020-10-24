@@ -70,11 +70,11 @@
               @endforeach
               </div>
             </li> --}}
-            {{-- <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
               <a class="nav-link" href="{{asset('contactanos')}}">
                 Contacto
               </a>
-            </li> --}}
+            </li>
 
             <li class="nav-item dropdown">
               <a class="nav-link" href="{{asset('blog')}}">
