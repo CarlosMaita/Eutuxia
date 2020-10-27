@@ -28,6 +28,6 @@ class MessageController extends Controller
     {
     	Message::create($request->all());
 
-    	return redirect('/contactanos#contacted')->with('message', 'Mensaje enviado con éxito!');
+    	return redirect('/gracias-por-contactarnos#contacted')->with('message', 'Mensaje enviado con éxito!');
     }
 }

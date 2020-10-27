@@ -24,6 +24,7 @@ Route::get('/cms', function () {
 	}
 })->name('login');
 
+
 Route::post('/login', 'LoginController@authenticate');
 
 Route::prefix('cms')->middleware('auth')->group(function () {
@@ -156,6 +157,8 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 Route::get('/', 'MainController@home');
 
 Route::get('/contactanos', 'MainController@contactanos')->name('contactanos');
+Route::get('/gracias-por-contactarnos', 'MainController@contactanos')->name('gracias');
+
 
 Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contacto.send');
 
