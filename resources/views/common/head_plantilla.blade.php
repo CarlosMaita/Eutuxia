@@ -43,7 +43,6 @@
 <link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/style.css')}}">
 
 {{-- main js --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="{{asset('js/plantilla_js/app.js')}}"></script>
-
-<!--Jquery-->
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="{{asset('vendor/animejs/anime.min.js')}}"></script>
