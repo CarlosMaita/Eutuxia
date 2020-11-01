@@ -11,6 +11,10 @@
 		{{-- contenido --}}
 		@yield('content')
 		
+	 
+	 	{{-- footer --}}
+		 @include('common.plantilla_footer')
+	 
 		<!--Div where the WhatsApp will be rendered-->
 		<div id="WAButton" style="border-radius: 50%; z-index:1000"></div>
 		<script type="text/javascript">  
@@ -28,9 +32,5 @@
 		 });
 		});
 		</script>  
-	 
-	 	{{-- footer --}}
-		 @include('common.plantilla_footer')
-	 
 </body>
 </html>
