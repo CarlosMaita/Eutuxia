@@ -238,7 +238,7 @@ $color_header='dark';
       <div class="col-12 col-lg-4">
         <article class="card card-minimal">
           <a href="https://servielectra.com.ve/" target="_black" class="card-img-container">
-            <img class="card-img" src="{{asset('imagen/oxas/servielectra.png')}}" alt="Profile">
+            <img class="card-img" src="{{asset('imagen/oxas/servielectra.webp')}}" alt="Profile">
           </a>
           <div class="card-body">
             <h5 class="card-title text-center"><a target="_blank" href="https://servielectra.com.ve/">Servielectra</a></h5>
@@ -248,7 +248,7 @@ $color_header='dark';
       <div class="col-12 col-lg-4">
         <article class="card card-minimal">
           <a href="https://ecofoodsservices.com/"  class="card-img-container" target="_blank">
-            <img  class="card-img" src="{{asset('imagen/oxas/ecofood.png')}}" alt="Portal">
+            <img  class="card-img" src="{{asset('imagen/oxas/ecofood.webp')}}" alt="Portal">
           </a>
           <div class="card-body">
             <h5 class="card-title text-center"><a target="_blank" href="https://ecofoodsservices.com/">Ecofood Services</a></h5>
@@ -258,7 +258,7 @@ $color_header='dark';
       <div class="col-12 col-lg-4">
         <article class="card card-minimal">
           <a href="http://eurochemus.com/"  class="card-img-container" target="_blank">
-            <img class="card-img" src="{{asset('imagen/oxas/eurochem.png')}}" alt="Connections">
+            <img class="card-img" src="{{asset('imagen/oxas/eurochem.webp')}}" alt="Connections">
           </a>
           <div class="card-body">
             <h5 class="card-title text-center"><a target="_blank" href="http://eurochemus.com/" >Eurochem Us</a></h5>
