@@ -99,6 +99,100 @@
 </main>
 
 
+<section class="bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <span class="eyebrow mb-1 text-primary">Quieres conocer de nuestros productos & servicios</span>
+        <h2>¡Dejanos tus datos,<br>Te escribiremos!</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col" id="contacted" >
+        @if(session('message'))
+        <div class="alert alert-success" role="alert">
+          {{session('message')}}
+        </div>
+        @else
+          <div class="alert alert-danger" id="error_container" style="display: none;"></div>
+          <form action="{{route('contacto.send')}}" id="form" method="POST">
+            @csrf
+            <div class="form-row mb-1">
+              <div class="col">
+                <input type="text" class="form-control form-control-minimal" id="name" name="name"  placeholder="Nombre">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control form-control-minimal" id="email" name="email" placeholder="Correo">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control form-control-minimal" id="phone" name="phone" placeholder="Telefono">
+              </div>
+            </div>
+            <div class="form-row mb-1">
+              <div class="col">
+                <textarea class="form-control form-control-minimal" name="message" id="message" id="exampleFormControlTextarea1" rows="3" placeholder="Cuentanos de tu proyecto."></textarea>
+              </div>
+            </div>
+            <div class="form-row mt-3">
+              <div class="col">
+                <button class="btn btn-primary px-5" id="button_submit">Enviar</button>
+              </div>
+            </div>
+          </form>
+        @endif
+      </div>
+    </div>
+  </div>
+</section>
+<script type="text/javascript">
+  let submitButton = document.getElementById('button_submit'),
+      form = document.getElementById('form'),
+      error_container = document.getElementById('error_container'),
+      input_name = document.getElementById('name'),
+      input_email = document.getElementById('email'),
+      input_phone = document.getElementById('phone'),
+      input_message = document.getElementById('message');
+
+
+    submitButton.addEventListener('click', e => {
+      e.preventDefault()
+      let errors = [];
+
+      error_container.innerHTML = ''
+      error_container.style.display = 'none'
+
+      if(input_name.value == '')
+      {
+        errors.push('Debes colocar un nombre')
+      }if(input_email.value == '')
+      {
+        errors.push('Debes colocar un email')
+      } if(input_phone.value == '')
+      {
+        errors.push('Debes colocar un número telefonico')
+      } if(input_message.value == '')
+      {
+        errors.push('Debes colocar un mensaje')
+      }
+
+      if(errors.length > 0)
+      {
+        let main = document.createElement('ul')
+        errors.forEach(error =>{
+          main.innerHTML +=
+          `
+            <li>${error}</li>
+          `
+        })
+
+        error_container.appendChild(main)
+        error_container.style.display = 'block'
+      }else {
+        form.submit();
+      }
+
+    }); 
+</script>
 
 <!-- news -->
 <section class="bg-light separator-top">
