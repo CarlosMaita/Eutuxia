@@ -5,16 +5,6 @@
 	@include('common.head_plantilla')
 </head>
 <body>
-	
-		<link rel="stylesheet" type="text/css" href="{{asset('css/estilos_images_dinamicas.css')}}">
-		<!--Floating WhatsApp css-->
-		<link rel="stylesheet" href="{{asset('css/floating-wpp.css')}}" />
-		<!-- fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-
-		<!--AOS-->
-		<link href="{{asset('vendor/aos/aos.css')}}" type="text/css" rel="stylesheet"/>
 	 
 		{{-- menu	 --}}
 		@include('common.menu')
