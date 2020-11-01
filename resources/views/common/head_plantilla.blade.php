@@ -22,7 +22,7 @@
 <!-- metas -->
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+{{-- precargas css  --}}
 <link rel="preload" as="style" href="{{asset('css/plantilla_css/style.css')}}">
 <link rel="preload" as="style" type="text/css" href="{{asset('css/plantilla_css/vendor.css')}}">
 <link rel="preload" as="style" type="text/css" href="{{asset('css/estilos_images_dinamicas.css')}}">
@@ -31,12 +31,19 @@
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,700">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap">
-{{-- <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" > --}}
 <link rel="preload" as="style" href="{{asset('vendor/aos/aos.css')}}" type="text/css" />
+{{-- precargas js  --}}
+<link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" as="script">
+<link rel="preload" href="{{asset('vendor/animejs/anime.min.js')}}" as="script">
+<link rel="preload" href="{{asset('js/plantilla_js/app.js')}}" as="script">
+<link rel="preload" href="{{asset('js/plantilla_js/vendor.js')}}" as="script">
+<link rel="preload" href="{{asset('vendor/aos/aos.js')}}" as="script">
 
+{{-- main css --}}
 <link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/style.css')}}">
+
+{{-- main js --}}
+<script src="{{asset('js/plantilla_js/app.js')}}"></script>
+
 <!--Jquery-->
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="{{asset('vendor/animejs/anime.min.js')}}"></script>
-
-https://fonts.googleapis.com/css?family=Rubik:300,400,700
