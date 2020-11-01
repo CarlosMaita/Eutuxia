@@ -23,12 +23,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<link rel="preload" as="styles" type="text/css" href="{{asset('css/plantilla_css/vendor.css')}}">
-<link rel="preload" as="styles" type="text/css" href="{{asset('css/estilos_images_dinamicas.css')}}">
-<link rel="preload" as="styles" href="{{asset('css/floating-wpp.css')}}"/>
-<link rel="preload" as="styles" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap">
-<link rel="preload" as="styles" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" >
-<link rel="preload" as="styles" href="{{asset('vendor/aos/aos.css')}}" type="text/css" />
+<link rel="preload" as="style" type="text/css" href="{{asset('css/plantilla_css/vendor.css')}}">
+<link rel="preload" as="style" type="text/css" href="{{asset('css/estilos_images_dinamicas.css')}}">
+<link rel="preload" as="style" href="{{asset('css/floating-wpp.css')}}"/>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" >
+<link rel="preload" as="style" href="{{asset('vendor/aos/aos.css')}}" type="text/css" />
 
 <link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/style.css')}}">
 <!--Jquery-->
