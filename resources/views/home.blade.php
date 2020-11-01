@@ -27,7 +27,8 @@
 <meta property="twitter:title" content="Oxas - Desarrollamos negocios digitales">
 <meta property="twitter:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
 <meta property="twitter:image" content="{{asset('imagen/oxas/share.jpg')}}">
-
+{{-- url canonical --}}
+<link rel="canonical" href="https://oxas.tech" />
 
 
 @php

@@ -19,6 +19,10 @@
 <meta property="twitter:title" content="Nosotros - Agencia digital en LATAM ">
 <meta property="twitter:description" content="La agencia digital OXAS que se hará cargo de tu crecimiento. Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital.">
 <meta property="twitter:image" content="{{asset('imagen/oxas/team.jpg')}}">
+{{-- url canonical --}}
+<link rel="canonical" href="https://oxas.tech/nosotros" />
+
+
 @php
 // importante para el color de las letras del header dark o light
     $color_header='light';
