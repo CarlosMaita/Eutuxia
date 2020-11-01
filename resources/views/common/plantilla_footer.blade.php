@@ -57,6 +57,19 @@
     </div>
   </div>
 </footer>
+
+
+<!-- css-->
+<link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/vendor.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('css/estilos_images_dinamicas.css')}}">
+<link rel="stylesheet" href="{{asset('css/floating-wpp.css')}}"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="{{asset('vendor/aos/aos.css')}}">
+<link href="{{asset('vendor/aos/aos.css')}}" type="text/css" rel="stylesheet"/>
+
+
+{{-- <script src="{{asset('js/floating-wpp.js')}}"></script> --}}
 <script src="{{asset('js/plantilla_js/vendor.js')}}"></script>
 <script src="{{asset('js/plantilla_js/app.js')}}"></script>
 <script src="{{asset('vendor/aos/aos.js')}}"></script>
