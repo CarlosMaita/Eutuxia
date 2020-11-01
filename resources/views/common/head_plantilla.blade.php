@@ -44,8 +44,10 @@
 
 {{-- main css --}}
 <link rel="stylesheet" type="text/css" href="{{asset('css/plantilla_css/style.css')}}">
-<link rel="stylesheet" href="{{asset('css/floating-wpp.css')}}"/>
+
 
 {{-- main js --}}
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> --}}
+<script src="{{asset('js/plantilla_js/vendor.min.js')}}"></script>
+<script src="{{asset('js/plantilla_js/app.js')}}"></script>
 <script src="{{asset('vendor/animejs/anime.min.js')}}"></script>
