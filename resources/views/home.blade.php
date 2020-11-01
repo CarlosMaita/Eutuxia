@@ -20,6 +20,12 @@
 <meta property="twitter:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
 <meta property="twitter:image" content="{{asset('imagen/oxas/share.jpg')}}">
 
+{{-- precargar imagenes --}}
+<link rel="preload" href="{{asset('imagen/oxas/eurochem.webp')}}" as="image">
+<link rel="preload" href="{{asset('imagen/oxas/ecofood.webp')}}" as="image">
+<link rel="preload" href="{{asset('imagen/oxas/servielectra.webp')}}" as="image">
+<link rel="preload" href="{{asset('imagen/oxas/fondo2.jpg')}}" as="image">
+
 @php
 // importante para el color de las letras del header
 $color_header='dark';
@@ -265,6 +271,7 @@ $color_header='dark';
           </div>
         </article>
       </div>
+     
       {{-- <div class="col-6 col-lg-4">
         <article class="card card-minimal">
           <a href="html/app/groups.html"  class="card-img-container">
