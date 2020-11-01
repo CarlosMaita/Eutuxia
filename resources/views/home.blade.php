@@ -1,6 +1,14 @@
 @extends('common.main_plantilla')
 
 @section('title')
+
+{{-- precargar imagenes --}}
+<link rel="preload" href="{{asset('imagen/oxas/fondo2.jpg')}}" as="image">
+<link rel="preload" href="{{asset('imagen/oxas/eurochem.webp')}}" as="image">
+<link rel="preload" href="{{asset('imagen/oxas/ecofood.webp')}}" as="image">
+<link rel="preload" href="{{asset('imagen/oxas/servielectra.webp')}}" as="image">
+<link rel="preload" href="{{asset('imagen/fondo.png')}}" as="image">
+
 <!-- Primary Meta Tags -->
 <title>Oxas - Desarrollamos negocios digitales</title>
 <meta name="title" content="Oxas - Desarrollamos negocios digitales">
@@ -20,11 +28,7 @@
 <meta property="twitter:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
 <meta property="twitter:image" content="{{asset('imagen/oxas/share.jpg')}}">
 
-{{-- precargar imagenes --}}
-<link rel="preload" href="{{asset('imagen/oxas/eurochem.webp')}}" as="image">
-<link rel="preload" href="{{asset('imagen/oxas/ecofood.webp')}}" as="image">
-<link rel="preload" href="{{asset('imagen/oxas/servielectra.webp')}}" as="image">
-<link rel="preload" href="{{asset('imagen/oxas/fondo2.jpg')}}" as="image">
+
 
 @php
 // importante para el color de las letras del header
