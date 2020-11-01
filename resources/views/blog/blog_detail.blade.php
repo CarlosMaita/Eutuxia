@@ -19,6 +19,8 @@
 <meta property="twitter:title" content="Blog — {{$articulo->title}}">
 <meta property="twitter:description" content="{{$articulo->description}}">
 <meta property="twitter:image" content="{{asset('storage/'.$articulo->image)}}">
+{{-- url canonical --}}
+<link rel="canonical" href="https://oxas.tech/blog/{{$articulo->slug}}" />
 @endsection
 
 
