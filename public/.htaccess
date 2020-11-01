@@ -22,4 +22,8 @@
     # Remove 'index.php'
     RewriteCond %{THE_REQUEST} /index\.php [NC]
     RewriteRule (.*?)index\.php/?(.*)?$ /$1$2 [R=301,NE,L]
+
+    RewriteCond %{HTTP_HOST} (.*)
+    RewriteCond %{REQUEST_URI} /$ [NC]
+    RewriteRule ^(.*)(/)$ $ 1 [L,R =301]
 </IfModule>
