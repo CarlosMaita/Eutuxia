@@ -210,7 +210,7 @@
           <a href="{{route('blog.show', $reciente->slug)}}" class="tile-content">
             <div class="tile-header">
               <span class="eyebrow mb-1">{{$reciente->title}}</span>
-              <h3>{{$reciente->description}}</h3>
+              <h3 class="h5">{{$reciente->description}}</h3>
             </div>
             <div class="tile-footer">
               <button class="btn btn-ico btn-outline-white btn-rounded">

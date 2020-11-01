@@ -31,7 +31,7 @@
               <a href="{{route('blog.show', $article->slug)}}" class="tile-content">
                 <div class="tile-footer">
                   <span class="eyebrow mb-1">{{$article->title}}</span>
-                  <h3>{{$article->description}}</h3>
+                  <h3 class="h5">{{$article->description}}</h3>
                 </div>
               </a>
             </article>
