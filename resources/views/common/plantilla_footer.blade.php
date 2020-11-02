@@ -13,7 +13,7 @@
                 </p>
                 <ul class="socials">
                   <li><a href="https://www.facebook.com/OXAS-TECH-108906604277879" class="icon-facebook fs-20"></a></li>
-                  <li><a href="https://instagram.com/oxas.tech?igshid=1uw6otxdm53bh" class="icon-instagram fs-20"></a></li>
+                  <li><a href="https://www.instagram.com/oxas.tech/" class="icon-instagram fs-20"></a></li>
                   <li><a href="https://www.linkedin.com/company/oxastech" class="icon-linkedin fs-20"></a></li>
                   {{-- <li><a href="" class="icon-twitter fs-20"></a></li> --}}
                 </ul>
