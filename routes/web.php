@@ -200,3 +200,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// funnels
+Route::get('/tienda-de-instagram-venezuela', 'FunnelController@funnel_01')->name('funnel_01');
+Route::get('/tienda-de-instagram-venezuela_ok', 'FunnelController@funnel_01_ok')->name('funnel_01_ok');
+
+//leads
+Route::resource('Lead', 'LeadController');
