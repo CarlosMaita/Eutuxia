@@ -57,7 +57,7 @@
                   </div> --}}
                   <div class="col-12 p-1">
                     <!-- Button trigger modal -->
-                      <a type="button" class="btn btn-outline-primary btn-block" href="#requisitos">
+                      <a type="button" class="btn btn-outline-primary btn-block d-block d-sm-none" href="#requisitos">
                         Ver Requisitos
                       </a>
                   </div> 
@@ -65,7 +65,7 @@
                   
               </p>
             </div>
-            <div class="col-lg-4 d-none d-sm-block">
+            <div class="col-lg-6 d-none d-sm-block">
               <img src="{{asset('imagen/funnels/tienda-instagram-03.svg')}}" alt="tienda de instagram">
             </div>
           </div>
