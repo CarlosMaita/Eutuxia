@@ -3,8 +3,8 @@
 @section('title')
 @php
   $titulo = "Tienda de Instagram - Requisitos y configuración ";
-  $descripcion = "";   
-  $url = "https://oxas.tech/tienda-de-intagram-venezuela";   
+  $descripcion = "¿Ya sabes como configurar tu tienda en instagram?, En este Articulo te damos todos los detalles.";   
+  $url = "https://oxas.tech/tienda-de-intagram-venezuela_ok";   
 @endphp
 <!-- Primary Meta Tags -->
 <title>{{$titulo}}</title>
@@ -16,14 +16,14 @@
 <meta property="og:url" content="{{$url}}">
 <meta property="og:title" content="{{$titulo}}">
 <meta property="og:description" content="{{$descripcion}}">
-<meta property="og:image" content="{{asset('imagen/oxas/team.jpg')}}">
+<meta property="og:image" content="{{asset('imagen/funnels/tienda-instagram-03.svg')}}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{$url}}">
 <meta property="twitter:title" content="{{$titulo}}">
 <meta property="twitter:description" content="{{$descripcion}}">
-<meta property="twitter:image" content="{{asset('imagen/oxas/team.jpg')}}">
+<meta property="twitter:image" content="{{asset('imagen/funnels/tienda-instagram-03.svg')}}">
 {{-- url canonical --}}
 <link rel="canonical" href="{{$url}}" />
 <meta name="csrf-token" content="{{ csrf_token() }}">
