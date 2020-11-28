@@ -38,7 +38,6 @@
 @section('content')
 
     <!-- hero -->
-
     <section class="pt-5 m-2">
         <div class="container">
           <div class="row justify-content-center">
@@ -66,20 +65,21 @@
                   
               </p>
             </div>
-            <div class="col-lg-6 d-none d-sm-block text-center p-5">
+            <div class="col-lg-4 d-none d-sm-block">
               <img src="{{asset('imagen/funnels/tienda-instagram-03.svg')}}" alt="tienda de instagram">
             </div>
           </div>
-        </div>    
+        </div>  
+        <div class="row">
+          <div class="col-12">
+            <p class="lead text-center"><b>¡Empecemos por lo primero!</b><br> Los <b style="color:#8ed825">REQUISITOS</b> para tu tienda de Instagram.<br></p>
+          </div>
+        </div>  
       </section>
       <!-- / hero -->
   
       
-      <div class="row">
-        <div class="col-12">
-          <p class="lead text-center"><b>¡Empecemos por lo primero!</b><br> Los <b style="color:#8ed825">REQUISITOS</b> para tu tienda de Instagram.<br></p>
-        </div>
-      </div>
+      
     
       
     <!-- blog -->
@@ -87,59 +87,110 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <h2 class="text-center"><b>Requisitos</b> para Tienda Instagram</h2>
-			   <small>**hacer click en los requisitos para mas información</small>
+            <h2 class="text-center">Para tener una tienda en Instagram <b>NECESITAS...</b></h2>
+			   <small>**hacer click en los requisitos para más información</small>
           </div>
-        </div>
+        </div>   
+        <!-- Button trigger modal -->
+        <button id="btn_modal1" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId1">
+          Ver Requisitos
+        </button>
+          <!-- Button trigger modal -->
+          <button id="btn_modal2" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId2">
+            Ver Requisitos
+          </button>
+            <!-- Button trigger modal -->
+        <button id="btn_modal3" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId3">
+          Ver Requisitos
+        </button>
+            <!-- Button trigger modal -->
+            <button id="btn_modal4" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId4">
+              Ver Requisitos
+            </button>
+
+               <!-- Button trigger modal -->
+        <button id="btn_modal5" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId5">
+          Ver Requisitos
+        </button>
+          <!-- Button trigger modal -->
+          <button id="btn_modal6" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId6">
+            Ver Requisitos
+          </button>
+            <!-- Button trigger modal -->
+        <button id="btn_modal7" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId7">
+          Ver Requisitos
+        </button>
+            <!-- Button trigger modal -->
+            <button id="btn_modal8" type="button" class="btn btn-outline-primary btn-block d-none" data-toggle="modal" data-target="#modelId8">
+              Ver Requisitos
+            </button>
+            
+
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <article class="news">
+            {{-- <article class="news">
               <a href="https://www.facebook.com/business/help/549256849084694" target="_blank" rel="noopener noreferrer">
                 <h3 class="news-title">Estar en la lista de países donde está habilitada la tienda</h3>
                 <time datetime="2018-02-02">Verificar pais</time>
               </a>
-            </article>
+            </article> --}}
             <article class="news">
-              <a href="">
-                <h3 class="news-title">Ser una cuenta de Instagram confiable</h3>
+              <a onclick="$('#btn_modal1').click()">
+                <h3 class="news-title">Tener una cuenta de Instagram confiable</h3>
                 <time datetime="2018-02-02">Nada de Trampas</time>
               </a>
             </article>
             <article class="news">
-              <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/business/learn/lessons/create-an-instagram-business-profile?course_id=428024244490300&curriculum_id=809171499485562">
+              <a onclick="$('#btn_modal2').click()" >
                 <h3 class="news-title">Tener un perfil de empresa de instagram</h3>
                 <time datetime="2018-02-02">Es necesario</time>
               </a>
             </article>
             <article class="news">
-              <a href="">
-                <h3 class="news-title">Tener una Fan page en Facebook</h3>
-                <time datetime="2018-02-02">Dale una mirada</time>
-              </a>
-            </article>
-            <article class="news">
-              <a href="https://oxas.tech/contactanos" style="background:#8ed825">
-                <h3 class="news-title"><b>Tener una página web tipo Ecommerce o Catalogo</b></h3>
-                <time datetime="2018-02-02">Aqui te la construimos</time>
-              </a>
-            </article>
-            <article class="news">
-              <a href="#none">
-                <h3 class="news-title">Tener catálogo de productos en facebook</h3>
-                <time datetime="2018-02-02">Siempre es Bueno</time>
-              </a>
-            </article>
-            <article class="news">
-              <a href="#none">
+              <a onclick="$('#btn_modal3').click()">
                 <h3 class="news-title">Tener la última versión de Instagram</h3>
                 <time datetime="2018-02-02">Debes estar actualizado</time>
               </a>
             </article>
+            <article class="news">
+              <a onclick="$('#btn_modal4').click()">
+                <h3 class="news-title">Tener una Fan page en Facebook</h3>
+                <time datetime="2018-02-02">Dale una mirada</time>
+              </a>
+            </article>
+           
+            <article class="news">
+              <a onclick="$('#btn_modal5').click()">
+                <h3 class="news-title">Dominio Único</h3>
+                <time datetime="2018-02-02">El de tu sitio web</time>
+              </a>
+            </article>
+            <article class="news">
+              <a onclick="$('#btn_modal6').click()"  style="background:#8ed825">
+                <h3 class="news-title"><b>Tener una página web que represente a tu negocio</b></h3>
+                <time datetime="2018-02-02">Aqui te la construimos</time>
+              </a>
+            </article>
+            <article class="news">
+              <a onclick="$('#btn_modal7').click()">
+                <h3 class="news-title">Tener una cuenta comercial en Facebook Business</h3>
+                <time datetime="2018-02-02">El control digital del negocio</time>
+              </a>
+            </article>
+            <article class="news">
+              <a onclick="$('#btn_modal8').click()">
+                <h3 class="news-title">Tener catálogo de productos</h3>
+                <time datetime="2018-02-02">Los que vas a mostrar</time>
+              </a>
+            </article>
+           
+           
+     
           </div>
         </div>
         <div class="row">
           <div class="col-12">
-            <p class="lead text-center"><b>¿Sabias que necesitas un sitio web?</b><br>mmm... Tenemos <b style="color:#8ed825">ASESORÍA + SITIO WEB</b> para tu tienda de Instagram.<br>
+            <p class="lead text-center"><b>¿Aún no tienes tu pagina web?</b><br>mmm... Te brindamos <b style="color:#8ed825">ASESORÍA + SITIO WEB</b> para tu tienda de Instagram.<br>
               <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20Quiero%20mi%20tienda%20de%20Instagram%20en%20promoción%20con%20la%20ecommerce.%20" class="btn btn-rounded btn-primary ml-1">Promoción</a></p>
           </div>
         </div>
@@ -151,8 +202,10 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-md-6 text-center">
-              <h2>Configurar <br><b>Tienda de Instagram</b></h2>
-              <p>Los pasos para iniciar una tienda de Instagram, lo primero será verificar que tienes todos los requisitos mencionados anteriormente.</p>
+              <h2><b>Configura</b> <br>tú tienda de Instagram</h2>
+              <p>Recuerda cumplir con todos los requisitos de Instagram antes mencionados y dar cumplimiento a los <a href="https://help.instagram.com/1627591223954487?helpref=uf_permalink" target="_blank" rel="noopener noreferrer"> terminos comerciales de facebook</a>.</p>
+              {{-- <p>Los pasos para iniciar una tienda de Instagram, lo primero será verificar que tienes todos los requisitos mencionados anteriormente.</p> --}}
+              <small>**hacer click en los número para más información</small>
             </div>
           </div>
           <div class="row justify-content-between">
@@ -163,34 +216,69 @@
               <div class="accordion-group accordion-group-steps" data-accordion-group>
                 <div class="accordion open" data-accordion>
                   <div class="accordion-control" data-control>
-                    <h5>Verificar requisitos</h5>
+                    <h5>Tener cuenta de empresa en Instagram</h5>
                   </div>
                   <div class="accordion-content" data-content>
                     <div class="accordion-content-wrapper">
-                      <p>Antes de poder comenzar una tienda de Instagram, debes cumplir con todos los requisitos de Instagram y dar cumplimiento a los <a href="https://help.instagram.com/1627591223954487?helpref=uf_permalink" target="_blank" rel="noopener noreferrer"> terminos comerciales de facebook</a>.</p>
+                      <p>El primer paso es tener tu cuenta de Instagram apta para habilitar la funcionalidad, para ello debes tener la cuenta de tu negocio en modo “empresa”. También, deberás tener la última versión de Instagram instalada en tu Smartphone.  Ambos requisitos  son indispensables.</p>
                     </div>
                   </div>
                 </div>
                 <div class="accordion" data-accordion>
                   <div class="accordion-control" data-control>
-                    <h5>Agrega tu catálogo</h5>
+                    <h5>Crear la Fan page de tu negocio</h5>
                   </div>
                   <div class="accordion-content" data-content>
                     <div class="accordion-content-wrapper">
-                      <p>Las tiendas de Instagram obtienen información del producto de las tiendas de Facebook. Entonces, ahora que tu cuenta de Instagram debe estar vinculada a tu página de Facebook, debes <a href="https://www.facebook.com/business/help/1275400645914358?id=725943027795860" target="_blank" rel="noopener noreferrer">crear una tienda de Facebook</a>  y sincronizar tu catálogo de productos.</p>
+                      <p>Si aún no tienes una fan page de tu negocio en Facebook este es el momento de crearla, con ella tendrás mayor exposición a tus clientes. Además, se creará una cuenta en Facebook Business Necesaria para tener tu tienda. </p>
                     </div>
                   </div>
                 </div>
                 <div class="accordion" data-accordion>
                   <div class="accordion-control" data-control>
-                    <h5>Habilitar la Funcionalidad</h5>
+                    <h5>Crear un negocio en Facebook</h5>
                   </div>
                   <div class="accordion-content" data-content>
                     <div class="accordion-content-wrapper">
-                      <p>Sigue los siguientes paso que se muestras <a href="https://www.facebook.com/help/instagram/1108695469241257?helpref=related" target="_blank" rel="noopener noreferrer">Aqui</a>.<br>Dirijete a Instagram en tu Smartphone y solicita la opción de Instagram Shopping desde instagram. Una vez que recibas la notificación de aprobación, todo lo que necesitas hacer es confirmar qué tienda de Facebook deseas conectar a tu perfil de Instagram.</p>
+                      <p>Para activar una cuenta comercial en Facebook Business deberás crear un negocio en Facebook y vincularlo a tu Fan page. Esta opción la puedes conseguir en el dashboard de Facebook Business Suite en Mas herramientas >> Configuración del negocio.</p>
                     </div>
                   </div>
                 </div>
+                <div class="accordion" data-accordion>
+                  <div class="accordion-control" data-control>
+                    <h5>Verificar dominio de tu sitio web</h5>
+                  </div>
+                  <div class="accordion-content" data-content>
+                    <div class="accordion-content-wrapper">
+                      <p>Para poder crear una tienda Facebook debe verificar  el dominio de tu sitio web, este debe ser único y que represente a tu empresa, marca o negocio. Este es un requisito comercial fue añadido reciente por Facebook para poder activar la cuenta comercial de tu negocio en Facebook Business. </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion" data-accordion>
+                  <div class="accordion-control" data-control>
+                    <h5>Crear catálogo de productos</h5>
+                  </div>
+                  <div class="accordion-content" data-content>
+                    <div class="accordion-content-wrapper">
+                      <p>Ya con la funcionalidad comercial habilitada en Facebook Business puedes crear tu catalogo en el administrador de catálogos y luego, agregar tus productos de forma manual, mediante una hoja de cálculo en Google o de forma automática con Pixel. Los productos que añadas deben tener una URL del dominio de tu sitio web registrada, de lo contrario no funcionará.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="accordion" data-accordion>
+                  <div class="accordion-control" data-control>
+                    <h5>Crear tu tienda en Instagram</h5>
+                  </div>
+                  <div class="accordion-content" data-content>
+                    <div class="accordion-content-wrapper">
+                      <p>Ya con el catalogo creado, ve a Instagram en tu Smartphone y solicita la opción de Instagram Shopping. Para hacer esto vamos al menú, ve a Configuración >> Negocio  y has click en “Compras en Instagram” y Dale “Empezar”. Lo siguiente será vincular tu catálogo de facebook previamente creado con  tu cuenta de Instagram.</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
                 <div class="accordion" data-accordion>
                   <div class="accordion-control" data-control>
                     <h5>Usa Instagram Shopping</h5>
@@ -211,13 +299,10 @@
           </div>
         </div>
       </section>
-{{-- 
-      <div class="row">
-        <div class="col-12">
-          <p class="lead text-center"><b>¿Qué beneficios obtendré?</b><br> Te lo contamos  <b style="color:#8ed825">TODO...</b><br></p>
-        </div>
-      </div> --}}
-  
+      
+
+
+
       <!-- features -->
       <section class="bg-primary separator-top separator-bottom" id="beneficios">
         <div class="container text-white">
@@ -278,5 +363,282 @@
       </section>
       <!-- / features -->
 
+
+        <!-- Modal de trampas -->
+        <div class="modal fade" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <form action="{{route('Lead.store')}}" method="post">
+                @csrf
+                @method('post')
+                <div class="modal-header">
+                    <h5 class="modal-title">Recuerda <b><span style="color:#8ed825">NADA DE TRAMPAS...</span></b><br>
+                      {{-- <small>Continuar Leyendo...</small> --}}
+                    </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                      top: 0;
+                      right: 0;">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              <div class="modal-body py-0 px-0 px-sm-3">
+                <div class="container-fluid">
+                  <div class="col-12 text-center p-5">
+                    <img src="{{asset('imagen/funnels/tienda-instagram-04.svg')}}" alt="tienda de instagram">
+                  </div>
+  
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+         <!-- Modal de Actualizado -->
+         <div class="modal fade" id="modelId2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <form action="{{route('Lead.store')}}" method="post">
+                @csrf
+                @method('post')
+                <div class="modal-header">
+                    <h5 class="modal-title">Eres negocio <b><span style="color:#8ed825">YA DEBERIAS TENERLO</span></b><br>
+                      {{-- <small>Continuar Leyendo...</small> --}}
+                    </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                      top: 0;
+                      right: 0;">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              <div class="modal-body py-0 px-0 px-sm-3">
+                <div class="container-fluid">
+                  <div class="col-12 text-center p-0">
+                    <img src="{{asset('imagen/funnels/tienda-instagram-06.svg')}}" alt="tienda de instagram">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer  d-block d-sm-flex">
+                <a target="_black" href="https://www.facebook.com/business/learn/lessons/create-an-instagram-business-profile?course_id=428024244490300&curriculum_id=809171499485562" type="button" class="btn btn-secondary btn-block">Información</a>
+                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Continuar</button>
+                
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+
+                     <!-- Modal de Actualizado -->
+                     <div class="modal fade" id="modelId3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <form action="{{route('Lead.store')}}" method="post">
+                            @csrf
+                            @method('post')
+                            <div class="modal-header">
+                                <h5 class="modal-title">No seas tan Boomer <b><span style="color:#8ed825">ACTUALIZATE</span></b><br>
+                                  {{-- <small>Continuar Leyendo...</small> --}}
+                                </h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                                  top: 0;
+                                  right: 0;">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                          <div class="modal-body py-0 px-0 px-sm-3">
+                            <div class="container-fluid">
+                              <div class="col-12 text-center p-0">
+                                <img src="{{asset('imagen/funnels/tienda-instagram-07.svg')}}" alt="tienda de instagram">
+                              </div>
+              
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Modal -->
+
+        <!-- Modal de Fan page -->
+        <div class="modal fade" id="modelId4" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <form action="{{route('Lead.store')}}" method="post">
+                @csrf
+                @method('post')
+                <div class="modal-header">
+                    <h5 class="modal-title">Mantén informados a tus <b><span style="color:#8ed825">FANS</span></b><br>
+                      {{-- <small>Continuar Leyendo...</small> --}}
+                    </h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                      top: 0;
+                      right: 0;">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+              <div class="modal-body py-0 px-0 px-sm-3">
+                <div class="container-fluid">
+                  <div class="col-12 text-center p-0">
+                    <img src="{{asset('imagen/funnels/tienda-instagram-05.svg')}}" alt="tienda de instagram">
+                  </div>
+  
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        <!-- Modal -->
+              <!-- Modal de Dominio -->
+              <div class="modal fade" id="modelId5" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                  <form action="{{route('Lead.store')}}" method="post">
+                      @csrf
+                      @method('post')
+                      <div class="modal-header">
+                          <h5 class="modal-title">Es tu nombre en <b><span style="color:#8ed825">INTERNET</span></b><br>
+                            {{-- <small>Continuar Leyendo...</small> --}}
+                          </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                            top: 0;
+                            right: 0;">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <div class="modal-body py-0 px-0 px-sm-3">
+                      <div class="container-fluid">
+                        <div class="col-12 text-center p-5">
+                          <img src="{{asset('imagen/funnels/tienda-instagram-08.svg')}}" alt="tienda de instagram">
+                        </div>
+        
+                      </div>
+                    </div>
+                    <div class="modal-footer  d-block d-sm-flex">
+                      <a target="_black" href="https://www.namecheap.com/domains/" type="button" class="btn btn-secondary btn-block m-1 btn-sm-flex"><span class="d-none d-sm-block"></span>Dominio</a>
+                      <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+      
+              <!-- Modal de Fan page -->
+              <div class="modal fade" id="modelId6" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                  <form action="{{route('Lead.store')}}" method="post">
+                      @csrf
+                      @method('post')
+                      <div class="modal-header">
+                          <h5 class="modal-title">Desarrollamos <b><span style="color:#8ed825">NEGOCIOS DIGITALES</span></b><br>
+                            {{-- <small>Continuar Leyendo...</small> --}}
+                          </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                            top: 0;
+                            right: 0;">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <div class="modal-body py-0 px-0 px-sm-3">
+                      <div class="container-fluid">
+                        <div class="col-12 text-center p-0">
+                          <img src="{{asset('imagen/funnels/tienda-instagram-10.svg')}}" alt="tienda de instagram">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer d-block d-sm-flex">
+                      <a target="_black" href="https://oxas.tech/nosotros" type="button" class="btn btn-secondary btn-block m-1"><span class="d-none d-sm-block"></span>Quienes somos</a>
+                      <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+      
+                     <!-- Modal de cuenta comercial -->
+                     <div class="modal fade" id="modelId7" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                      <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <form action="{{route('Lead.store')}}" method="post">
+                            @csrf
+                            @method('post')
+                            <div class="modal-header">
+                                <h5 class="modal-title">Gestiona tu negocio en <b><span style="color:#8ed825">FACEBOOK</span></b><br>
+                                  {{-- <small>Continuar Leyendo...</small> --}}
+                                </h5>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                                  top: 0;
+                                  right: 0;">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                              </div>
+                          <div class="modal-body py-0 px-0 px-sm-3">
+                            <div class="container-fluid">
+                              <div class="col-12 text-center p-0">
+                                <img src="{{asset('imagen/funnels/tienda-instagram-09.svg')}}" alt="tienda de instagram">
+                              </div>
+              
+                            </div>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                          </div>
+                        </form>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Modal -->
+              
+
+              
+
+               <!-- Modal de catalogo de productos -->
+               <div class="modal fade" id="modelId8" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                  <form action="{{route('Lead.store')}}" method="post">
+                      @csrf
+                      @method('post')
+                      <div class="modal-header">
+                          <h5 class="modal-title">Consigue mayor <b><span style="color:#8ed825">EXPOSICIÓN</span></b><br>
+                            {{-- <small>Continuar Leyendo...</small> --}}
+                          </h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                            top: 0;
+                            right: 0;">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    <div class="modal-body py-0 px-0 px-sm-3">
+                      <div class="container-fluid">
+                        <div class="col-12 text-center p-0">
+                          <img src="{{asset('imagen/funnels/tienda-instagram-03.svg')}}" alt="tienda de instagram">
+                        </div>
+        
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                    </div>
+                  </form>
+                  </div>
+                </div>
+              </div>
+              <!-- Modal -->
+                    
+              
       
 @endsection
