@@ -16,14 +16,14 @@
 <meta property="og:url" content="{{$url}}">
 <meta property="og:title" content="{{$titulo}}">
 <meta property="og:description" content="{{$descripcion}}">
-<meta property="og:image" content="{{asset('imagen/funnels/tienda-instagram-03.svg')}}">
+<meta property="og:image" content="{{asset('imagen/funnels/tienda-instagram-01.svg')}}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{$url}}">
 <meta property="twitter:title" content="{{$titulo}}">
 <meta property="twitter:description" content="{{$descripcion}}">
-<meta property="twitter:image" content="{{asset('imagen/funnels/tienda-instagram-03.svg')}}">
+<meta property="twitter:image" content="{{asset('imagen/funnels/tienda-instagram-01.svg')}}">
 {{-- url canonical --}}
 <link rel="canonical" href="{{$url}}" />
 <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -49,18 +49,25 @@
               <h2 class="text-center h5"><b>¡Ya puedes configurar la tuya para Venezuela!</b></h2>
               <p class="text-center">
                <div class="row">
-                  <div class="col-sm-6 text-right p-1">
-                     <!-- Button trigger modal -->
-                     <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modelId">
-                       Pasos para configurar
-                    </button>
-                  </div>
-                  <div class="col-sm-6 p-1 ">
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#modelId">
-                      Ver Requisitos
-                    </button>
-                  </div> 
+                 @if (session()->has('usuario_name'))
+                    <div class="col-sm-12 text-right p-1">
+                      <a href="{{route('funnel_01_ok')}}" class="btn btn-primary btn-block" >{{ ucfirst(session()->get('usuario_name', '')) }}, Puedes Continuar...</a>
+                    </div>
+                
+                 @else
+                        <div class="col-sm-6 text-right p-1">
+                          <!-- Button trigger modal -->
+                          <button type="button" class="btn btn-primary btn-block" data-toggle="modal" data-target="#modelId">
+                            Pasos para configurar
+                         </button>
+                       </div>
+                       <div class="col-sm-6 p-1 ">
+                         <!-- Button trigger modal -->
+                         <button type="button" class="btn btn-outline-primary btn-block" data-toggle="modal" data-target="#modelId">
+                           Ver Requisitos
+                         </button>
+                       </div> 
+                  @endif
                 </div> 
                   
               </p>
