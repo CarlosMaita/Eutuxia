@@ -16,14 +16,14 @@
 <meta property="og:url" content="{{$url}}">
 <meta property="og:title" content="{{$titulo}}">
 <meta property="og:description" content="{{$descripcion}}">
-<meta property="og:image" content="{{asset('imagen/funnels/tienda-instagram-01.svg')}}">
+<meta property="og:image" content="{{asset('imagen/funnels/share-tienda.jpg')}}">
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="{{$url}}">
 <meta property="twitter:title" content="{{$titulo}}">
 <meta property="twitter:description" content="{{$descripcion}}">
-<meta property="twitter:image" content="{{asset('imagen/funnels/tienda-instagram-01.svg')}}">
+<meta property="twitter:image" content="{{asset('imagen/funnels/share-tienda.jpg')}}">
 {{-- url canonical --}}
 <link rel="canonical" href="{{$url}}" />
 <meta name="csrf-token" content="{{ csrf_token() }}">
