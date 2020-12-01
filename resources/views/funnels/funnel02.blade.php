@@ -4,7 +4,7 @@
 @php
   $titulo = "Tienda de Instagram - Requisitos y configuración ";
   $descripcion = "¿Ya sabes como configurar tu tienda en instagram?, En este Articulo te damos todos los detalles.";   
-  $url = "https://oxas.tech/tienda-de-intagram-venezuela";    
+  $url = "https://oxas.tech/tienda-de-intagram-ropa";    
 @endphp
 <!-- Primary Meta Tags -->
 <title>{{$titulo}}</title>
@@ -42,8 +42,8 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6 mt-5">
-              <h1 class="text-decorated text-center">Tienda de instagram <b>Venezuela</b></h1>
-              <p class="text-center h5">La funcionalidad de <mark style="background-color: #8ed825;" >Instagram shopping</mark> te permitirá tener una tienda en instagram y mostrar tu catalogo de productos. <br>
+              <h1 class="text-decorated text-center">¿Ya Tienes Instagram Shopping para tu tienda de Ropa?</h1>
+              <p class="text-center h5">La funcionalidad de <mark style="background-color: #8ed825;" >Instagram shopping</mark> es ideal para las Tiendas de Ropa, ¡Podrás mostrar y Promocionar todo tu almacén!<br>
               </p>
                 <img class="d-sm-none" src="{{asset('imagen/funnels/tienda-instagram-01.jpg')}}" alt="tienda de instagram">
               <h2 class="text-center h5"><b>¡Ya puedes configurar la tuya para Venezuela!</b></h2>
@@ -90,7 +90,7 @@
           <form action="{{route('Lead.store')}}" method="post">
               @csrf
               @method('post')
-              <input type="hidden" name="funnel_type" value="General">
+              <input type="hidden" name="funnel_type" value="Ropa">
               <div class="modal-header">
                   <h5 class="modal-title"><span>Para continuar leyendo, por favor...</span><br>
                     {{-- <small>Continuar Leyendo...</small> --}}

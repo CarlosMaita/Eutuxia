@@ -150,6 +150,9 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 
 	Route::get('/mensajes', 'Cms\MessageController@index')->name('message.home');
 	Route::get('/message/get/{id}', 'Cms\MessageController@getMessage');
+
+	//-------------- LEADS ----------------
+	Route::get('/leads', 'LeadController@index')->name('lead.home');
 });
 
 
@@ -202,6 +205,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 // funnels
 Route::get('/tienda-de-instagram-venezuela', 'FunnelController@funnel_01')->name('funnel_01');
+Route::get('/tienda-de-instagram-ropa', 'FunnelController@funnel_02')->name('funnel_02');
+Route::get('/tienda-de-instagram-empresa', 'FunnelController@funnel_03')->name('funnel_03');
 Route::get('/tienda-de-instagram-venezuela_ok', 'FunnelController@funnel_01_ok')->name('funnel_01_ok');
 
 //leads

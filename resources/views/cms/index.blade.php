@@ -105,6 +105,12 @@
                 Mensajes
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('lead.home')}}">
+                <span data-feather="home"></span>
+                Leads
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
