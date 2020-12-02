@@ -4,7 +4,7 @@
 @php
   $titulo = "Tienda de Instagram - Requisitos y configuración ";
   $descripcion = "¿Ya sabes como configurar tu tienda en instagram?, En este Articulo te damos todos los detalles.";   
-  $url = "https://oxas.tech/tienda-de-intagram-ropa";    
+  $url = "https://oxas.tech/tienda-de-instagram-ropa";    
 @endphp
 <!-- Primary Meta Tags -->
 <title>{{$titulo}}</title>
