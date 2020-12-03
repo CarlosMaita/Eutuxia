@@ -42,11 +42,11 @@
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-lg-6 mt-5">
-              <h1 class="text-decorated text-center">¿Ya Tienes Instagram Shopping para tu tienda de Ropa?</h1>
-              <p class="text-center h5">La funcionalidad de <mark style="background-color: #8ed825;" >Instagram shopping</mark> es ideal para las Tiendas de Ropa, ¡Podrás mostrar y Promocionar todo tu almacén!<br>
+              <h1 class="text-decorated text-center">Instagram Shopping para<br><b>Tienda de Ropa</b></h1>
+              <p class="text-center h5">La funcionalidad de <mark style="background-color: #8ed825;" >Instagram shopping</mark> es ideal para las marcas con Tiendas de Ropa, Zapatos y Accesorios.<br>
               </p>
                 <img class="d-sm-none" src="{{asset('imagen/funnels/tienda-instagram-01.jpg')}}" alt="tienda de instagram">
-              <h2 class="text-center h5"><b>¡Ya puedes configurar la tuya para Venezuela!</b></h2>
+              <h2 class="text-center h5"><b>¡Podrás mostrar y Promocionar todo tu almacén!</b></h2>
               <p class="text-center">
                <div class="row">
                  @if (session()->has('usuario_name'))

@@ -211,3 +211,8 @@ Route::get('/tienda-de-instagram-venezuela_ok', 'FunnelController@funnel_01_ok')
 
 //leads
 Route::resource('Lead', 'LeadController');
+
+//politicas de privacidad
+Route::get('/politicas-de-privacidad', function(){
+	return view('politicas_privacidad');
+})->name('politicas_privacidad');

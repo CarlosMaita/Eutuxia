@@ -191,7 +191,7 @@
         <div class="row">
           <div class="col-12">
             <p class="lead text-center"><b>¿Aún no tienes tu pagina web?</b><br>mmm... Te brindamos <b style="color:#8ed825">ASESORÍA + SITIO WEB</b> para tu tienda de Instagram.<br>
-              <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20Quiero%20mi%20tienda%20de%20Instagram%20en%20promoción%20con%20la%20ecommerce.%20" class="btn btn-rounded btn-primary ml-1">Promoción</a></p>
+              <a href="https://api.whatsapp.com/send?phone=584165124043&text=Hola,%20Quiero%20mi%20tienda%20de%20Instagram%20en%20promoción%20con%20la%20ecommerce.%20" class="btn btn-rounded btn-primary ml-1">Promoción</a></p>
           </div>
         </div>
       </div>
@@ -294,7 +294,7 @@
           </div>
           <div class="row">
             <div class="col-12">
-              <p class="lead text-center"><b>¿Necesitas ayuda con la configuración?</b> Si, ¡Quiero ayuda!. <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20Necesito%20ayuda%20con%20mi%20tienda%20de%20Instagram.%20" class="btn btn-rounded btn-primary ml-1">Whatsapp</a></p>
+              <p class="lead text-center"><b>¿Necesitas ayuda con la configuración?</b> Si, ¡Quiero ayuda!. <a href="https://api.whatsapp.com/send?phone=584165124043&text=Hola,%20Necesito%20ayuda%20con%20mi%20tienda%20de%20Instagram.%20" class="btn btn-rounded btn-primary ml-1">Whatsapp</a></p>
             </div>
           </div>
         </div>
