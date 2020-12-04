@@ -57,7 +57,7 @@ $color_header='dark';
                   <p>Tus aliados</p>
                   <p>todo lo que necesitas ...</p>
               </div>
-              <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
+              <a href="https://oxas.tech/nosotros" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
             </div>
           </div>
         </div>
