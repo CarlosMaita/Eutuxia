@@ -59,3 +59,6 @@
 <script src="{{asset('js/plantilla_js/vendor.min.js')}}"></script>
 <script src="{{asset('js/plantilla_js/app.js')}}"></script>
 <script src="{{asset('vendor/animejs/anime.min.js')}}"></script>
+
+{{-- mailchimp  --}}
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9a2612ae8cceea1bb57092607/86d020f1433ed2931ebf175b2.js");</script>
