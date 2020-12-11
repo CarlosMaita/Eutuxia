@@ -1,4 +1,5 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /cms/
 
 Sitemap: https://oxas.tech/sitemap.xml

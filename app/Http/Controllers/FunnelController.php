@@ -31,4 +31,10 @@ class FunnelController extends Controller
     {
         return view('funnels.funnel01_ok');
     }
+
+    public function funnel_04_venta()
+    {
+        return view('funnels.funnel04_venta');
+    }
+
 }

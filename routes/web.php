@@ -208,6 +208,7 @@ Route::get('/tienda-de-instagram-venezuela', 'FunnelController@funnel_01')->name
 Route::get('/tienda-de-instagram-ropa', 'FunnelController@funnel_02')->name('funnel_02');
 Route::get('/tienda-de-instagram-empresa', 'FunnelController@funnel_03')->name('funnel_03');
 Route::get('/tienda-de-instagram-venezuela_ok', 'FunnelController@funnel_01_ok')->name('funnel_01_ok');
+Route::get('/tienda-de-instagram-venta', 'FunnelController@funnel_04_venta')->name('funnel_o4_venta');
 
 //leads
 Route::resource('Lead', 'LeadController');
