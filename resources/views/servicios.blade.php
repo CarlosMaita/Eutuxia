@@ -76,7 +76,7 @@
            <div class="row">
              <div class="col-lg-7">
                <h2 class="text-uppercase font-weight-bold h3">Crecimiento digital</h2>
-               <p class="lead">Somos una agencia digital especializada en desarrollo web. Construimos plataformas que permiten a nuestros clientes escalar.</p>
+               <p class="lead">Somos una agencia digital especializada en desarrollo web. Construimos plataformas que permiten a nuestros clientes crecer.</p>
              </div>
            </div>
            <div class="row gutter-3">
@@ -246,7 +246,6 @@
               </i><br>
               Hablar por Whatsapp
             </a>
-          </div>
         </div>
       </div>
     
