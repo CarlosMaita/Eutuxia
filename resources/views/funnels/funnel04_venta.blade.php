@@ -31,7 +31,7 @@
 
 @php
 // importante para el color de las letras del header dark o light
-    $color_header='light';
+    $color_header='dark';
 @endphp
 @endsection
 
@@ -47,11 +47,11 @@
             </div>
 
             <div class="col-12"> 
-              <h1 class="text-center text-white" style="font-family: Rubik;">¿Aún no tienes Sitio Web?<br> Y Buscas activar
+              <h1 class="text-center text-white" style="font-family: Rubik;">¿Aún no tienes Ecommerce?<br> Y Buscas activar
                 <b class="text-white">Instagram Shopping<b> 
               </h1>
               <h2 class="text-center text-white h5">
-                Te construimos un sitio web  que te permite activar Instagram Shopping. <br>Incrementa las Ventas de tu empresa.  
+               <b>@if (session()->has('usuario_hot')) {{session()->get('usuario_hot', '').','}} @endif</b> Te construimos un sitio web  que te permite activar Instagram Shopping. <br>Incrementa las Ventas de tu empresa.  
               </h2>
             </div>
            
@@ -59,221 +59,206 @@
         </div>  
         <div class="row">
           <div class="col-12 text-center">
-            <button type="button" name="" id="" role="link" onclick="window.location='#precios'" class="btn btn-dark btn-lg  px-5" style="border-radius: 30px" >Ver Precios</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-dark btn-lg  px-5 btn-rounded" data-toggle="modal" data-target="#modelId_info">
+              Solicitar precios
+            </button>
           </div>
         </div>  
       </section>
       <!-- / hero -->
   
+      <section class="bg-white separator-top separator-bottom py-4 p-2" id="beneficios">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 order-2 order-md-1">
+              <h2 class="text-dark">¡Nuestra oferta esta <b class="text-dark">GENIAL</b>!</h2>
+              <p class="text-dark h5">
+                Se trata de una Ecommerce que construiremos para tí en  <mark class="bg-primary"><b>una (1) Semana.</b></mark><br><br>
+                Contamos con <mark class="bg-primary"><b>Precios Increibles</b></mark>, aceptamos Efectivo, Zelle, Paypal y hasta Criptos.
+                <br><br>
+              </p>
+              <p class="text-dark h6">
+                **Si estas buscando una ecommerce para vender una manera mas agresiva, esta es tu oportunidad.  
+              </p>
+            </div>
+            <div class="col-md-6 order-1 order-md-2">
+              <img src="{{asset('imagen/illustrations/draw-1.svg')}}" alt="demos">
+            </div>
+          </div>
+        </div>
+    </section>
 
+      {{-- video promocional --}}
+      <section class="bg-white p-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-6">
+              <img src="{{asset('imagen/illustrations/draw-6.svg')}}" alt="demos">
+            </div>
+            <div class="col-sm-6">
+              <span class="eyebrow text-dark">Ecommerce</span>
+              <h2 class="text-dark">Algunos <b class="text-dark">DEMOS</b>
+              </h2>
+              <p class="text-dark h6">Tenemos tres modelos de ecommerce. ¡Descubre sus funcionalidades!</p>
+              <a name="" id="" class="btn btn-outline-primary btn-block" target="_black" href="http://shop.vzla.cc/" role="button">Tienda de Ropa</a>
+              <a name="" id="" class="btn btn-outline-primary btn-block" target="_black" href="http://tienda.vzla.cc/" role="button">Tienda de Repuestos</a>
+              <a name="" id="" class="btn btn-outline-primary btn-block" target="_black" href="http://store.vzla.cc/" role="button">Tienda de PC & Celulares</a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      {{-- video promocional --}}
+
+   
 
       <!-- features -->
-      <section class="bg-primary separator-top separator-bottom" id="beneficios">
-        <div class="container text-white">
+      <section class="bg-white separator-top separator-bottom p-2" id="beneficios">
+        <div class="container">
           <div class="row">
             <div class="col">
-              <h2>Algunos <b>BENEFICIOS...</b></h2>
+              <h2 ><b class="text-dark">BENEFICIOS DE LA OFERTA...</b></h2>
             </div>
           </div>
           <div class="row gutter-2 gutter-lg-4">
             <div class="col-md-6 col-lg-4">
               <div class="media align-items-center mb-2">
-                <i class="svg-icon fs-50 text-white mr-3">
-                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-bag-fill" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="#8ED825" stroke-width="0.5" fill="none"  d="M8 1a2.5 2.5 0 0 0-2.5 2.5V4h5v-.5A2.5 2.5 0 0 0 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5z"/>
-                  </svg>
+                <i class="svg-icon fs-60 text-dark mr-3 text-center">
+                  <img src="{{asset('/imagen/funnels/tienda.svg')}}" alt="tienda" width="50%">
                 </i>
-                <div class="media-body">
-                  <h5 class="fs-20 font-weight-normal"><b>PROMOCIÓN</b></h5>
-                </div>
+              
               </div>
-              <p class="text-white">Podrás promocionar tus productos directamente a los usuarios de Instagram a través de publicaciones e historias</p>
+              <p class="text-dark" style="font-weight: 400"><b class="text-dark">Ecommerce</b> para Pymes con <b class="text-dark">carrito de compra</b> que lleva los pedidos al whatsapp. </p>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="media align-items-center mb-2">
-                <i class="svg-icon fs-50 text-white mr-3">
-                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-cash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="#8ED825" stroke-width="0.5" fill="none"  d="M15 4H1v8h14V4zM1 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H1z"/>
-                    <path  stroke="#8ED825" stroke-width="0.5" fill="none"  d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"/>
-                  </svg>
+                <i class="svg-icon fs-60 text-dark mr-3 text-center">
+                  <img src="{{asset('/imagen/funnels/cms.svg')}}" alt="cms" width="50%">
                 </i>
-                <div class="media-body">
-                  <h5 class="fs-20 font-weight-normal"><b>PRECIO</b></h5>
-                </div>
+              
               </div>
-              <p class="text-white">Podrás mostrar precios de los productos presentados en las publicaciones y facilitar el proceso de compra a tus seguidores.</p>
+              <p class="text-dark" style="font-weight: 400">Administrador para <b class="text-dark">gestionar productos, pedidos, compradores, publicidad</b> y usuarios administrativos.</p>
             </div>
             <div class="col-md-6 col-lg-4">
               <div class="media align-items-center mb-2">
-                <i class="svg-icon fs-60 text-white mr-3">
-                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-book" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke="#8ED825" stroke-width="0.5" fill="none" d="M1 2.828v9.923c.918-.35 2.107-.692 3.287-.81 1.094-.111 2.278-.039 3.213.492V2.687c-.654-.689-1.782-.886-3.112-.752-1.234.124-2.503.523-3.388.893zm7.5-.141v9.746c.935-.53 2.12-.603 3.213-.493 1.18.12 2.37.461 3.287.811V2.828c-.885-.37-2.154-.769-3.388-.893-1.33-.134-2.458.063-3.112.752zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                  </svg>
+                <i class="svg-icon fs-60 text-dark mr-3 text-center">
+                  <img src="{{asset('/imagen/funnels/asesoria.svg')}}" alt="asesoria" width="50%">
+                </i>
+              
+              </div>
+              <p class="text-dark" style="font-weight: 400"><b class="text-dark">Una (1) sesión de acompañamiento</b> para analizar tu rendimiento con la plataforma luego de un mes.</p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="media align-items-center mb-2">
+                <i class="svg-icon fs-60 text-dark mr-3 text-center">
+                  <img src="{{asset('/imagen/funnels/design.svg')}}" alt="diseño" width="50%">
+                </i>
+              
+              </div>
+              <p class="text-dark" style="font-weight: 400">Instalamos la ecommerce adaptada a tu marca. El <b class="text-dark">diseño responsivo</b> se adapta a cualquier dispositivo.</p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="media align-items-center mb-2">
+                <i class="svg-icon fs-60 text-dark mr-3 text-center">
+                  <img src="{{asset('/imagen/funnels/medir.svg')}}" alt="medir" width="50%">
+                </i>
+              </div>
+              <p class="text-dark" style="font-weight: 400">Instalamos <b class="text-dark">Google analitic</b> para medir la adquicision, comportamiento y conversiones de la ecommerce.</p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="media align-items-center mb-2">
+                <i class="svg-icon fs-60 text-dark mr-3 text-center">
+                  <img src="{{asset('/imagen/funnels/extra.svg')}}" alt="extra" width="50%">
                 </i>
                 <div class="media-body">
-                  <h5 class="fs-20 font-weight-normal"><b>CATALOGO</b></h5>
+                  {{-- <h5 class="fs-20 font-weight-normal"><b class="text-primary">Extras</b></h5> --}}
                 </div>
-              </div>
-              <p class="text-white">Podrás integrar tu catálogo de productos con tu perfil de Instagram y mostrarlo en tu tienda virtual.</p>
+              </div> 
+              <p class="text-dark" style="font-weight: 400">El <b class="text-dark">domimino, Hosting y SSL</b> serán incluidos en la oferta.</p>
             </div>
           </div>
          
           <div class="row">
             <div class="col-12">
-              <p class="lead text-center"><b>¿Estás Listo?</b> Si, ¡Quiero mi tienda!. <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20Quiero%20mi%20tienda%20de%20Instagram.%20" class="btn btn-rounded btn-white ml-1">Ir a una conversación</a></p>
+              <p class="lead text-center text-dark" ><b class="text-primary"> ¿Estás Listo <b class="text-primary">@if (session()->has('usuario_hot')) {{session()->get('usuario_hot', '')}} @endif</b>?</b> Si, ¡Quiero mi tienda!. 
+                @if (!session()->has('usuario_hot'))
+                  <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary btn-rounded ml-1" data-toggle="modal" data-target="#modelId_precio">
+                      Ir a los precios
+                    </button>
+                  @else  
+                  <a href="https://api.whatsapp.com/send?phone=584165124043&text=Hola,%20Quiero%20mi%20ecommerce%20Ya." class="btn btn-rounded btn-primary ml-1">Atención al Cliente</a>
+                  @endif
             </div>
           </div>
         </div>
       </section>
       <!-- / features -->
 
-
-        <!-- Modal de trampas -->
-        <div class="modal fade" id="modelId1" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <form action="{{route('Lead.store')}}" method="post">
-                @csrf
-                @method('post')
-                <div class="modal-header">
-                    <h5 class="modal-title">Recuerda <b><span style="color:#8ed825">NADA DE TRAMPAS...</span></b><br>
-                      {{-- <small>Continuar Leyendo...</small> --}}
-                    </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                      top: 0;
-                      right: 0;">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-              <div class="modal-body py-0 px-0 px-sm-3">
-                <div class="container-fluid">
-                  <div class="col-12 text-center p-5">
-                    <img src="{{asset('imagen/funnels/tienda-instagram-04.svg')}}" alt="tienda de instagram">
-                  </div>
-  
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
-              </div>
-            </form>
-            </div>
-          </div>
-        </div>
-        <!-- Modal -->
-         <!-- Modal de Actualizado -->
-         <div class="modal fade" id="modelId2" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <form action="{{route('Lead.store')}}" method="post">
-                @csrf
-                @method('post')
-                <div class="modal-header">
-                    <h5 class="modal-title">Eres negocio <b><span style="color:#8ed825">YA DEBERIAS TENERLO</span></b><br>
-                      {{-- <small>Continuar Leyendo...</small> --}}
-                    </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                      top: 0;
-                      right: 0;">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
-                  </div>
-              <div class="modal-body py-0 px-0 px-sm-3">
-                <div class="container-fluid">
-                  <div class="col-12 text-center p-0">
-                    <img src="{{asset('imagen/funnels/tienda-instagram-06.svg')}}" alt="tienda de instagram">
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer  d-block d-sm-flex">
-                <a target="_black" href="https://www.facebook.com/business/learn/lessons/create-an-instagram-business-profile?course_id=428024244490300&curriculum_id=809171499485562" type="button" class="btn btn-secondary btn-block">Información</a>
-                <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Continuar</button>
-                
-              </div>
-            </form>
-            </div>
-          </div>
-        </div>
-        <!-- Modal -->
-
-                     <!-- Modal de Actualizado -->
-                     <div class="modal fade" id="modelId3" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                        <form action="{{route('Lead.store')}}" method="post">
-                            @csrf
-                            @method('post')
-                            <div class="modal-header">
-                                <h5 class="modal-title">No seas tan Boomer <b><span style="color:#8ed825">ACTUALIZATE</span></b><br>
-                                  {{-- <small>Continuar Leyendo...</small> --}}
-                                </h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                                  top: 0;
-                                  right: 0;">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                          <div class="modal-body py-0 px-0 px-sm-3">
-                            <div class="container-fluid">
-                              <div class="col-12 text-center p-0">
-                                <img src="{{asset('imagen/funnels/tienda-instagram-07.svg')}}" alt="tienda de instagram">
-                              </div>
+    {{-- modal de lead informacion --}}
+          <div class="modal fade " id="modelId_info" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                @if (session()->has('usuario_hot'))
+                <h6 class="text-dark p-2">{{session()->get('usuario_name', '')}}, <br><br>Pronto recibiras los precios por Correo. ¡Esta atento!</h6>
+              @else 
               
-                            </div>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
-                          </div>
-                        </form>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Modal -->
+              <form action="{{route('Lead.store')}}" method="post">
+                  @csrf
+                  @method('post')
+                  <input type="hidden" name="funnel_type" value="Ecommerce-precio-superior">
+                  <input type="hidden" name="id_funnel" value="01">
 
-        <!-- Modal de Fan page -->
-        <div class="modal fade" id="modelId4" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-            <form action="{{route('Lead.store')}}" method="post">
-                @csrf
-                @method('post')
-                <div class="modal-header">
-                    <h5 class="modal-title">Mantén informados a tus <b><span style="color:#8ed825">FANS</span></b><br>
-                      {{-- <small>Continuar Leyendo...</small> --}}
-                    </h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                      top: 0;
-                      right: 0;">
-                        <span aria-hidden="true">&times;</span>
-                      </button>
+                  <div class="modal-header">
+                      <h5 class="modal-title"><span class="text-dark">¡Quiero saber sobre los precios!</span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
+                        top: 0;
+                        right: 0;">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <div class="modal-body py-0 px-0 px-sm-3">
+                  <div class="container-fluid">
+                      <div class="form-group " >
+                        <label for="">Nombre</label>
+                        <input style="border-color: #f5f5f5" type="text"
+                          class="form-control  text-dark" name="nombre" id="nombre"  placeholder="Nombre" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="">Correo</label>
+                        <input style="border-color: #f5f5f5" type="email"
+                          class="form-control text-dark" name="correo" id="correo"  placeholder="Correo" required>
+                      </div>
+
                   </div>
-              <div class="modal-body py-0 px-0 px-sm-3">
-                <div class="container-fluid">
-                  <div class="col-12 text-center p-0">
-                    <img src="{{asset('imagen/funnels/tienda-instagram-05.svg')}}" alt="tienda de instagram">
-                  </div>
-  
                 </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary btn-block m-1" data-dismiss="modal">Cerrar</button>
+                  <button id="" type="submit" class="btn btn-primary btn-block m-1">Continuar</button>
+                </div>
+              </form>
+              @endif  
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
-              </div>
-            </form>
             </div>
           </div>
-        </div>
-        <!-- Modal -->
-              <!-- Modal de Dominio -->
-              <div class="modal fade" id="modelId5" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
+    {{-- modal de lead  --}}
+
+    
+    {{-- modal de lead precio --}}
+    <div class="modal fade " id="modelId_precio" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          @if (session()->has('usuario_hot'))
+           <h6 class="text-dark p-2">{{session()->get('usuario_name', '')}}, <br><br>Pronto recibiras los precios por Correo. ¡Esta atento!</h6>
+          @else 
                   <form action="{{route('Lead.store')}}" method="post">
                       @csrf
                       @method('post')
+                      <input type="hidden" name="funnel_type" value="Ecommerce-precio-inferior">
+                      <input type="hidden" name="id_funnel" value="01">
                       <div class="modal-header">
-                          <h5 class="modal-title">Es tu nombre en <b><span style="color:#8ed825">INTERNET</span></b><br>
-                            {{-- <small>Continuar Leyendo...</small> --}}
-                          </h5>
+                          <h5 class="modal-title"><span class="text-dark">¡Quiero saber los precios!</span></h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
                             top: 0;
                             right: 0;">
@@ -282,127 +267,41 @@
                         </div>
                     <div class="modal-body py-0 px-0 px-sm-3">
                       <div class="container-fluid">
-                        <div class="col-12 text-center p-5">
-                          <img src="{{asset('imagen/funnels/tienda-instagram-08.svg')}}" alt="tienda de instagram">
-                        </div>
-        
-                      </div>
-                    </div>
-                    <div class="modal-footer  d-block d-sm-flex">
-                      <a target="_black" href="https://www.namecheap.com/domains/" type="button" class="btn btn-secondary btn-block m-1 btn-sm-flex"><span class="d-none d-sm-block"></span>Dominio</a>
-                      <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
-                    </div>
-                  </form>
-                  </div>
-                </div>
-              </div>
-              <!-- Modal -->
-      
-              <!-- Modal de Fan page -->
-              <div class="modal fade" id="modelId6" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                  <form action="{{route('Lead.store')}}" method="post">
-                      @csrf
-                      @method('post')
-                      <div class="modal-header">
-                          <h5 class="modal-title">Desarrollamos <b><span style="color:#8ed825">NEGOCIOS DIGITALES</span></b><br>
-                            {{-- <small>Continuar Leyendo...</small> --}}
-                          </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                            top: 0;
-                            right: 0;">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    <div class="modal-body py-0 px-0 px-sm-3">
-                      <div class="container-fluid">
-                        <div class="col-12 text-center p-0">
-                          <img src="{{asset('imagen/funnels/tienda-instagram-10.svg')}}" alt="tienda de instagram">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="modal-footer d-block d-sm-flex">
-                      <a target="_black" href="https://oxas.tech/nosotros" type="button" class="btn btn-secondary btn-block m-1"><span class="d-none d-sm-block"></span>Quienes somos</a>
-                      <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
-                    </div>
-                  </form>
-                  </div>
-                </div>
-              </div>
-              <!-- Modal -->
-      
-                     <!-- Modal de cuenta comercial -->
-                     <div class="modal fade" id="modelId7" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                      <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                        <form action="{{route('Lead.store')}}" method="post">
-                            @csrf
-                            @method('post')
-                            <div class="modal-header">
-                                <h5 class="modal-title">Gestiona tu negocio en <b><span style="color:#8ed825">FACEBOOK</span></b><br>
-                                  {{-- <small>Continuar Leyendo...</small> --}}
-                                </h5>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                                  top: 0;
-                                  right: 0;">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                              </div>
-                          <div class="modal-body py-0 px-0 px-sm-3">
-                            <div class="container-fluid">
-                              <div class="col-12 text-center p-0">
-                                <img src="{{asset('imagen/funnels/tienda-instagram-09.svg')}}" alt="tienda de instagram">
-                              </div>
-              
-                            </div>
+                          <div class="form-group " >
+                            <label for="">Nombre</label>
+                            <input style="border-color: #f5f5f5" type="text"
+                              class="form-control  text-dark" name="nombre" id="nombre"  placeholder="Nombre" required>
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                          <div class="form-group">
+                            <label for="">Correo</label>
+                            <input style="border-color: #f5f5f5" type="email"
+                              class="form-control text-dark" name="correo" id="correo"  placeholder="Correo" required>
                           </div>
-                        </form>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Modal -->
-              
-
-              
-
-               <!-- Modal de catalogo de productos -->
-               <div class="modal fade" id="modelId8" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                  <form action="{{route('Lead.store')}}" method="post">
-                      @csrf
-                      @method('post')
-                      <div class="modal-header">
-                          <h5 class="modal-title">Consigue mayor <b><span style="color:#8ed825">EXPOSICIÓN</span></b><br>
-                            {{-- <small>Continuar Leyendo...</small> --}}
-                          </h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="position: absolute;
-                            top: 0;
-                            right: 0;">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                    <div class="modal-body py-0 px-0 px-sm-3">
-                      <div class="container-fluid">
-                        <div class="col-12 text-center p-0">
-                          <img src="{{asset('imagen/funnels/tienda-instagram-03.svg')}}" alt="tienda de instagram">
-                        </div>
-        
+          
                       </div>
                     </div>
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-primary btn-block m-1" data-dismiss="modal">Continuar</button>
+                      <button type="button" class="btn btn-secondary btn-block m-1" data-dismiss="modal">Cerrar</button>
+                      <button id="" type="submit" class="btn btn-primary btn-block m-1">Continuar</button>
                     </div>
                   </form>
-                  </div>
-                </div>
-              </div>
-              <!-- Modal -->
-                    
+          @endif  
+
+        </div>
+      </div>
+    </div>
+{{-- modal de lead  --}}
+
+              <script>
+                $('#exampleModal').on('show.bs.modal', event => {
+                  var button = $(event.relatedTarget);
+                  var modal = $(this);
+                  // Use above variables to manipulate the DOM
+        
+                  
+                });
+              </script>
+
               
       
 @endsection

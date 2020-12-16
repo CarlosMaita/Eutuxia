@@ -1,7 +1,27 @@
 @extends('common.main_plantilla')
 
 @section('title')
-<title>Blog</title>
+<title>Blog de tecnologia, marketing y negocios</title>
+<!-- Primary Meta Tags -->
+<meta name="title" content="Blog de tecnologia, marketing y negocios">
+<meta name="description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{Request::path()}}">
+<meta property="og:title" content="Blog de tecnologia, marketing y negocios">
+<meta property="twitter:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
+<meta property="twitter:image" content="{{asset('imagen/oxas/share.jpg')}}">
+
+<!-- Twitter -->
+
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{Request::path()}}">
+<meta property="twitter:title" content="Blog de tecnologia, marketing y negocios">
+<meta property="twitter:description" content="Hacemos que las personas te consigan en internet. Incrementa tus ventas y tu presencia digital. Agencia digital que se hará cargo de tu crecimiento.">
+<meta property="twitter:image" content="{{asset('imagen/oxas/share.jpg')}}">
+{{-- url canonical --}}
+<link rel="canonical" href="https://oxas.tech/blog" />
 @endsection
 
 @section('content')
