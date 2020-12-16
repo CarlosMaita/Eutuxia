@@ -44,7 +44,7 @@
                   <p>Tus aliados</p>
                   <p>todo lo que necesitas ...</p>
               </div>
-              <a href="" class="btn btn-with-ico btn-primary">Iniciar el crecimiento<i class="icon-arrow-right2 fs-20"></i></a>
+              <a href="/nosotros" class="btn btn-with-ico btn-primary">Sobre Nosotros<i class="icon-arrow-right2 fs-20"></i></a>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
            <div class="row">
              <div class="col-lg-7">
                <h2 class="text-uppercase font-weight-bold h3">Crecimiento digital</h2>
-               <p class="lead">Somos una agencia digital especializada en desarrollo web. Construimos plataformas que permiten a nuestros clientes crecer.</p>
+               <p class="lead">Somos una agencia digital especializada en desarrollo web. Construimos plataformas que permiten a nuestros clientes CRECER.</p>
              </div>
            </div>
            <div class="row gutter-3">
