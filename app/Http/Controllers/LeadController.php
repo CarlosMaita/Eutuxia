@@ -61,12 +61,19 @@ class LeadController extends Controller
         session(['usuario_name' => $nombre, 'usuario_email'=>$correo ]);
 
         if (isset($request->id_funnel)){
-            //funnel de venta 01
+            //funnel de venta 01 - venta de instagram
             if ($id_funnel=='01'){
                  // Store a piece of data in the session...
                 session(['usuario_hot' => $nombre, 'email_hot'=>$correo ]);
                 return back();
             }
+
+             //funnel de venta 02 - venta de servicios de desarrollo web
+             if ($id_funnel=='02'){
+                // Store a piece of data in the session...
+               session(['usuario_hot' => $nombre, 'email_hot'=>$correo ]);
+               return redirect('/agencia-de-desarrollo-web-gracias');
+           }
 
         }else{
             return redirect('/tienda-de-instagram-venezuela_ok');

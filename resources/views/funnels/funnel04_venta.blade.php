@@ -47,13 +47,19 @@
             </div>
 
             <div class="col-12"> 
+              @if(session()->has('usuario_hot'))
+              <h1 class="text-center text-white" style="font-family: Rubik;"><b>{{session()->get('usuario_hot', '').','}}</b> Gracias por dejarnos tus datos, pronto recibiras los precios por Correo. <br> 
+                <b class="text-white">¡Esta atento!<b> 
+              </h1>
+              @else
               <h1 class="text-center text-white" style="font-family: Rubik;">¿Aún no tienes Ecommerce?<br> Y Buscas activar
                 <b class="text-white">Instagram Shopping<b> 
               </h1>
               <h2 class="text-center text-white h5">
-               <b>@if (session()->has('usuario_hot')) {{session()->get('usuario_hot', '').','}} @endif</b> Te construimos un sitio web  que te permite activar Instagram Shopping. <br>Incrementa las Ventas de tu empresa.  
+                <b>@if (session()->has('usuario_hot')) {{session()->get('usuario_hot', '').','}} @endif</b> Te construimos un sitio web  que te permite activar Instagram Shopping. <br>Incrementa las Ventas de tu empresa.  
               </h2>
             </div>
+            @endif
            
           </div>
         </div>  

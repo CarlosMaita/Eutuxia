@@ -190,7 +190,7 @@ Route::get('/nosotros', function () {
 	$servicios = Service::all();
 	$proyectos = Project::all();
     return view('nosotros')->with(compact('productos', 'servicios', 'proyectos'));
-});
+})->name('nosotros');
 
 Route::get('/servicios', function () {
 	$productos = Product::all();
@@ -209,6 +209,9 @@ Route::get('/tienda-de-instagram-ropa', 'FunnelController@funnel_02')->name('fun
 Route::get('/tienda-de-instagram-empresa', 'FunnelController@funnel_03')->name('funnel_03');
 Route::get('/tienda-de-instagram-venezuela_ok', 'FunnelController@funnel_01_ok')->name('funnel_01_ok');
 Route::get('/tienda-de-instagram-venta', 'FunnelController@funnel_04_venta')->name('funnel_o4_venta');
+Route::get('/agencia-de-desarrollo-web', 'FunnelController@funnel_05_servicio')->name('funnel_05_servicio');
+Route::get('/agencia-de-desarrollo-web-gracias', 'FunnelController@funnel_05_servicio_gracias')->name('funnel_05_servicio_gracias');
+
 
 //leads
 Route::resource('Lead', 'LeadController');
