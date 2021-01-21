@@ -78,7 +78,7 @@
               Solicitar reunión
             </button>
            @endif
-            <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20Quiero%20informacion%20de%20sus%20Servicios." class="btn btn-rounded btn-secondary  m-1">Ir al Whatsapp</a>
+            <a href="#oferta" class="btn btn-rounded btn-secondary  m-1">Leer Más</a>
           </div>
         </div>  
         <div class="row">
@@ -88,8 +88,12 @@
         </div>
       </section>
       <!-- / hero -->
+
+<style>
+ html{scroll-behavior: smooth;}
+</style>
   
-      <section class="bg-white separator-top separator-bottom py-4 p-2" id="beneficios">
+      <section class="bg-white separator-top separator-bottom py-4 p-2" id="oferta">
         <div class="container">
           <div class="row">
             <div class="col-md-6 order-2 order-md-1">
