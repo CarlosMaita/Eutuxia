@@ -40,14 +40,14 @@
     <section class="bg-primary d-block d-lg-none"  style='min-height:10vh' >
     </section>
     <!-- hero -->
-    <section class="bg-primary pt-0">
+    <section class="pt-0" style="background:#2F2E41">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 d-none d-sm-block text-center m-5">
               @if(session()->has('usuario_hot'))
               <img width="300px" src="{{asset('imagen/funnels/hi-five.svg')}}" alt="Thank-you">
               @else
-              <img width="300px" src="{{asset('imagen/funnels/web-site.svg')}}" alt="tienda de instagram" style="mix-blend-mode: multiply;">
+              <img width="400px" src="{{asset('imagen/funnels/web-site.svg')}}" alt="tienda de instagram" >
               @endif
             </div>
 
@@ -74,7 +74,7 @@
           <div class="col-12 text-center">
            @if (!session()->has('usuario_hot'))
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-dark btn-lg  px-5 btn-rounded m-1" data-toggle="modal" data-target="#modelId_info">
+            <button type="button" class="btn btn-lg btn-primary  px-5 btn-rounded m-1" data-toggle="modal" data-target="#modelId_info" style=" color:white">
               Solicitar reunión
             </button>
            @endif
