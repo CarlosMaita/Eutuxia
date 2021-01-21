@@ -37,7 +37,7 @@
 
 
 @section('content')
-    <section class="bg-primary d-block d-lg-none"  style='min-height:10vh' >
+    <section class="d-block d-lg-none"  style='min-height:10vh' style="background:#2F2E41" >
     </section>
     <!-- hero -->
     <section class="pt-0" style="background:#2F2E41">
@@ -51,7 +51,7 @@
               @endif
             </div>
 
-            <div class="col-12"> 
+            <div class="col-12 p-2"> 
               @if(session()->has('usuario_hot'))
               <h1 class="text-center text-white" style="font-family: Rubik;"><b>{{session()->get('usuario_hot', '').','}}</b> Gracias por dejarnos tus datos,<br> 
               </h1>
@@ -81,6 +81,11 @@
             <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20Quiero%20informacion%20de%20sus%20Servicios." class="btn btn-rounded btn-secondary  m-1">Ir al Whatsapp</a>
           </div>
         </div>  
+        <div class="row">
+          <div class="col-12 text-center">
+            <small class=" text-muted">**Asegurate de leer toda nuestra propuesta</small>
+          </div>
+        </div>
       </section>
       <!-- / hero -->
   
