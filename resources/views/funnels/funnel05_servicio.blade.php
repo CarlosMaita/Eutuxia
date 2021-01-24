@@ -37,10 +37,10 @@
 
 
 @section('content')
-    <section class="d-block d-lg-none"  style='min-height:10vh' style="background:#2F2E41" >
+    <section class="d-block d-lg-none"  style='min-height:10vh' style="background:#151515" >
     </section>
     <!-- hero -->
-    <section class="pt-0" style="background:#2F2E41">
+    <section class="pt-0" style="background:#151515">
         <div class="container">
           <div class="row justify-content-center">
             <div class="col-12 d-none d-sm-block text-center m-5">
@@ -252,7 +252,7 @@
               <form action="{{route('Lead.store')}}" method="post">
                   @csrf
                   @method('post')
-                  <input type="hidden" name="funnel_type" value="Ecommerce-conversacion-superior">
+                  <input type="hidden" name="funnel_type" value="Solicitud-reunion-superior">
                   <input type="hidden" name="id_funnel" value="02">
 
                   <div class="modal-header">
@@ -305,7 +305,7 @@
                   <form action="{{route('Lead.store')}}" method="post">
                       @csrf
                       @method('post')
-                      <input type="hidden" name="funnel_type" value="Ecommerce-conversacion-inferior">
+                      <input type="hidden" name="funnel_type" value="Solicitud-reunion-inferior">
                       <input type="hidden" name="id_funnel" value="02">
                       <div class="modal-header">
                           {{-- <h5 class="modal-title"><span class="text-dark">¡Quiero reunirme con un asesor comercial!</span></h5> --}}

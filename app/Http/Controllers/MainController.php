@@ -15,21 +15,22 @@ class MainController extends Controller
 {
     public function home()
     {	
-    	$servicios = Service::all();
-    	$proyectos = Project::all();
-        $productos = Product::all();
-        
-        $articulos = BlogArticle::orderBy('id', 'DESC')->take(4)->get();
-    	return view('home')->with(compact('productos', 'servicios', 'proyectos', 'articulos' ));
+        return view('home');
+    }
+    
+    public function nosotros()
+    {	
+         return view('nosotros');
     }
 
+    public function servicios()
+    {	
+         return view('servicios');
+    }
 
     public function contactanos()
     {
-        $servicios = Service::all();
-        $proyectos = Project::all();
-        $productos = Product::all();
-        return view('contacto')->with(compact('productos', 'servicios', 'proyectos'));
+        return view('contacto');
     }
 
     public function blog()
@@ -68,37 +69,37 @@ class MainController extends Controller
         return view('blog.blog_detail')->with(compact('productos', 'servicios', 'proyectos', 'articulo', 'recientes'));
     }
 
-    public function productos($id){
+    // public function productos($id){
 
-    	$productos = Product::all();
-    	$servicios = Service::all();
-    	$proyectos = Project::all();
-    	$producto = Product::find($id);
-    	$banners = $producto->banners;
-        $articulo = BlogArticle::find($id);
-    	return view('productos.index')->with(compact('productos', 'producto', 'banners', 'servicios', 'proyectos'));
-    }
+    // 	$productos = Product::all();
+    // 	$servicios = Service::all();
+    // 	$proyectos = Project::all();
+    // 	$producto = Product::find($id);
+    // 	$banners = $producto->banners;
+    //     $articulo = BlogArticle::find($id);
+    // 	return view('productos.index')->with(compact('productos', 'producto', 'banners', 'servicios', 'proyectos'));
+    // }
 
 
-    public function servicios($id){
+    // public function servicios($id){
 
-    	$productos = Product::all();
-    	$servicios = Service::all();
-    	$proyectos = Project::all();
-    	$servicio = Service::find($id);
-    	$banners = $servicio->banners;
+    // 	$productos = Product::all();
+    // 	$servicios = Service::all();
+    // 	$proyectos = Project::all();
+    // 	$servicio = Service::find($id);
+    // 	$banners = $servicio->banners;
 
-    	return view('servicios.index')->with(compact('servicios', 'servicio', 'banners', 'productos', 'proyectos'));
-    }
+    // 	return view('servicios.index')->with(compact('servicios', 'servicio', 'banners', 'productos', 'proyectos'));
+    // }
 
-    public function proyectos($id)
-    {
-    	$productos = Product::all();
-    	$servicios = Service::all();
-    	$proyectos = Project::all();
-    	$proyecto = Project::find($id);
+    // public function proyectos($id)
+    // {
+    // 	$productos = Product::all();
+    // 	$servicios = Service::all();
+    // 	$proyectos = Project::all();
+    // 	$proyecto = Project::find($id);
 
-    	$banners = $proyecto->banners;
-    	return view('proyectos.index')->with(compact('servicios', 'proyectos', 'proyecto', 'banners', 'productos'));
-    }
+    // 	$banners = $proyecto->banners;
+    // 	return view('proyectos.index')->with(compact('servicios', 'proyectos', 'proyecto', 'banners', 'productos'));
+    // }
 }

@@ -35,14 +35,14 @@
         <div class="container">
           <div class="row align-items-end vh-75">
             <div class="col-md-5 text-white">
-              <span class="eyebrow mb-2">Diseño web</span>
-              <h2>Somos <br><span id="typed"></span></h2>
+              <span class="eyebrow mb-2">Servicios</span>
+              <h2>Ofrecemos <br><span id="typed"></span></h2>
               <div id="typed-strings">
-                  <p>Parte de tu Crecimiento</p>
-                  <p>Diseñadores</p>
-                  <p>Programadores</p>
-                  <p>Tus aliados</p>
-                  <p>todo lo que necesitas ...</p>
+                <p>Desarrollos a la medida</p>
+                <p>Diseño web</p>
+                <p>Redes sociales</p>
+                <p>Diseño Grafico</p>
+                <p>Marketing digital</p>
               </div>
               <a href="/nosotros" class="btn btn-with-ico btn-primary">Sobre Nosotros<i class="icon-arrow-right2 fs-20"></i></a>
             </div>
@@ -75,8 +75,8 @@
          <div class="col-12 col-lg-8">
            <div class="row">
              <div class="col-lg-7">
-               <h2 class="text-uppercase font-weight-bold h3">Crecimiento digital</h2>
-               <p class="lead">Somos una agencia digital especializada en desarrollo web. Construimos plataformas que permiten a nuestros clientes CRECER.</p>
+               <h2 class="text-uppercase font-weight-bold h3">Desarrollo Digital</h2>
+               <p class="lead">Somos una agencia digital especializada Diseño Web. Construimos plataformas que permiten a nuestros clientes CRECER.</p>
              </div>
            </div>
            <div class="row gutter-3">

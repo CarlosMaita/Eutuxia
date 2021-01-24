@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Cms\Product;
 use App\Cms\Service;
 use App\Cms\Project;
+use App\Lead;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +19,9 @@ use App\Cms\Project;
 Route::get('/cms', function () {
 	if (Auth::check()) {
 		// The user is logged in...
-		return view('cms.index');
+		// return view('cms.index');
+            $leads = Lead::orderBy('id','DESC')->paginate(25);
+            return view('cms.leads.leads', compact('leads'));        
 	}else{
 		return view('auth.login');
 	}
@@ -157,7 +160,7 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 
 
 
-Route::get('/', 'MainController@home');
+Route::get('/', 'MainController@home')->name('home');
 
 Route::get('/contactanos', 'MainController@contactanos')->name('contactanos');
 Route::get('/gracias-por-contactarnos', 'MainController@contactanos')->name('gracias');
@@ -170,38 +173,17 @@ Route::get('/blog/cat/{category_id}', 'MainController@blogCat')->name('blog.cat'
 
 Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show');
 
+
+
 Route::get('/productos/{id}', 'MainController@productos')->name('product.option');
-
-
 Route::get('/proyectos/{id}', 'MainController@proyectos')->name('project.option');
-
-
-Route::get('/servicios', function () {
-	$productos = Product::all();
-	$servicios = Service::all();
-	$proyectos = Project::all();
-    return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
-});
-
-Route::get('/servicios/{id}', 'MainController@servicios')->name('service.option');
-
-Route::get('/nosotros', function () {
-	$productos = Product::all();
-	$servicios = Service::all();
-	$proyectos = Project::all();
-    return view('nosotros')->with(compact('productos', 'servicios', 'proyectos'));
-})->name('nosotros');
-
-Route::get('/servicios', function () {
-	$productos = Product::all();
-	$servicios = Service::all();
-	$proyectos = Project::all();
-    return view('servicios')->with(compact('productos', 'servicios', 'proyectos'));
-});
+//nosotros
+Route::get('/nosotros', 'MainController@nosotros'  )->name('nosotros');
+//servicios
+Route::get('/servicios', 'MainController@servicios'  )->name('servicios');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 // funnels
 Route::get('/tienda-de-instagram-venezuela', 'FunnelController@funnel_01')->name('funnel_01');

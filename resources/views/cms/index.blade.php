@@ -15,6 +15,9 @@
   <!-- Axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
+{{-- fonts --}}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Sintony:wght@400;700&display=swap" rel="stylesheet">
   <!-- Favicons -->
   <style>
     .bd-placeholder-img {
@@ -31,14 +34,23 @@
         font-size: 3.5rem;
       }
     }
+
+    h1,h2,h3,h4,h5,h6 {
+      font-family: 'Montserrat', sans-serif;
+    }
+    p,a,th,td, input,button, form{
+      font-family: 'Sintony', sans-serif;
+    } 
+
   </style>
+  
   <!-- Custom styles for this template -->
   <link href="{{asset('css/dashboard.css')}}" rel="stylesheet">
 </head>
 
 <body>
   <nav class="navbar navbar-dark sticky-top bg-success flex-md-nowrap p-0 shadow">
-    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" target="_blank" href="https://ceaca.com/">Oxapp</a>
+    <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" target="_blank" href="{{route('home')}}">Oxas Tech</a>
     <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -64,39 +76,9 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('section.home')}}">
+              <a class="nav-link" href="{{route('lead.home')}}">
                 <span data-feather="home"></span>
-                Secciones
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('producto.home')}}">
-                <span data-feather="home"></span>
-                Productos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('service.home')}}">
-                <span data-feather="home"></span>
-                Servicios
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('project.home')}}">
-                <span data-feather="home"></span>
-                Proyectos
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('blog.category')}}">
-                <span data-feather="home"></span>
-                Blog Categorias
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('blog.article')}}">
-                <span data-feather="home"></span>
-                Blog Articulos
+                Leads
               </a>
             </li>
             <li class="nav-item">
@@ -106,11 +88,19 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('lead.home')}}">
+              <a class="nav-link" href="{{route('blog.category')}}">
                 <span data-feather="home"></span>
-                Leads
+                Categorias del Blog
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('blog.article')}}">
+                <span data-feather="home"></span>
+                Articulos del Blog
+              </a>
+            </li>
+           
+            
           </ul>
         </div>
       </nav>
@@ -120,7 +110,8 @@
       </main>
     </div>
   </div>
-
+  
+  
   <script src="{{asset('vendor/jquery/jquery.js')}}"></script>
   <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
   <script type="text/javascript">

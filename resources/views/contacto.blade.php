@@ -4,12 +4,12 @@
 <title>Contactanos</title>
 @php
 // importante para el color de las letras del header dark o light
-    $color_header='dark';
+    $color_header='white';
 @endphp
 @endsection
 
 @section('content')
-
+{{-- 
 
 <div class="swiper-container swiper-container-carousel">
   <div class="swiper-wrapper">
@@ -38,7 +38,7 @@
     </div>
     ...
   </div>
-</div>
+</div> --}}
 <style>
   .band{
     background-image:url('{{asset('imagen/oxas/curva_blanca.svg')}}');

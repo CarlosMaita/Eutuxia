@@ -81,6 +81,11 @@
                 Blog
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary btn-rounded p-1" href="{{route('funnel_05_servicio')}}" role="button" style="color: white">
+                Agencia de Desarrollo
+              </a>
+            </li>
 
           </ul>
         </div>
