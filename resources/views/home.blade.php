@@ -81,7 +81,7 @@ $color_header='dark';
 	    <p class="text_page">
         Es un sitio web de una sola pagina y cuyo objetivo principal es transformar visitantes en clientes, usualmente usado para recibir usuarios de otros canales de marketing como redes sociales. 
 	    </p>
-	    <a href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" type="button" class="btn btn-primary btn-rounded text-white">Mas Información</a>
+	    <a href="https://api.whatsapp.com/send?phone=584244545814&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" type="button" class="btn btn-primary btn-rounded text-white">Mas Información</a>
 	  </div>
     <div class="col-6 d-none d-sm-block" style="text-align:left;">
 	    <!--div-- class="">
@@ -116,7 +116,7 @@ $color_header='dark';
 	    <p class="text_page">Realizamos paginas animadas, y muy atractivas a los usarios. Ten en cuenta que el tiempo que tarda un usario en tu sitio web,
 	      incrementa exponencialmente la posibilidad de que el usuario se convierta en cliente.
 	    </p>
-	    <a  href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" type="button" class="btn btn-primary btn-rounded" >¡Quiero mi página!</a>
+	    <a  href="https://api.whatsapp.com/send?phone=584244545814&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" type="button" class="btn btn-primary btn-rounded" >¡Quiero mi página!</a>
 	  </div>
   </div>
   
@@ -179,7 +179,7 @@ $color_header='dark';
         Es un sitio web donde podrás vender productos/servicios de forma digital. Podrás gestionar tu inventario, ventas, compradores, envios y demás procesos que
 	      facilitaran la gestion de tu empresa.
 	    </p>
-	    <a  href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20quiero%20una%20Tienda%20Online." type="button" class="btn btn-primary btn-rounded">Crear mi tienda!</a>
+	    <a  href="https://api.whatsapp.com/send?phone=584244545814&text=Hola,%20quiero%20una%20Tienda%20Online." type="button" class="btn btn-primary btn-rounded">Crear mi tienda!</a>
 	  </div>
 	  <div class="col-6 d-none d-sm-block" style="text-align:left;">
       <div class="cont_image">
@@ -202,7 +202,7 @@ $color_header='dark';
 	      <p class="text_page">
 	        Nuestro equipo puede crear tu aplicacion web como la desees, contamos con un equipo de profesionales en diseño UI/UX, desarrolladores de Frond-end, Back-end y Devops.  ¡Hacemos proyecto a la medida del cliente!. <br>
 	      </p>
-	      <a  href="https://api.whatsapp.com/send?phone=584143446225&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" type="button" class="btn btn-primary btn-rounded">Empezar una conversación</a>
+	      <a  href="https://api.whatsapp.com/send?phone=584244545814&text=Hola,%20%20quiero%20mas%20informaci%C3%B3n%20de%20sus%20servicios.%20" type="button" class="btn btn-primary btn-rounded">Empezar una conversación</a>
 	    </div>
 	  </div>
 </div>

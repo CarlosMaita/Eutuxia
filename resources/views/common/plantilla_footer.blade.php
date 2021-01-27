@@ -48,7 +48,7 @@
               </ul>
             </div> --}}
             <div class="col-lg-2 text-lg-right">
-              <a href="tel:58-414-344-62-25" class="phone bordered">+584143446225</a>
+              <a href="tel:58-424-454-58-14" class="phone bordered">+584244545814</a>
             </div>
           </div>
           <span class="copyright-text">&copy; <b> Eutuxia Group, C.A. J-50017524-8</b>  -  Todos los derechos reservados 2020.</span>
