@@ -11,7 +11,7 @@
 	<!-- End Google Tag Manager (noscript) -->
 
 
-		<!--Div where the WhatsApp will be rendered-->
+		{{-- <!--Div where the WhatsApp will be rendered-->
 		<div id="WAButton" style="border-radius: 50%; z-index:1000"></div>
 		<script type="text/javascript">  
 			$(function() {
@@ -27,7 +27,7 @@
 			position: "right"    
 			});
 			});
-		</script>  
+		</script>   --}}
 	 
 		{{-- menu	 --}}
 		@include('common.menu')

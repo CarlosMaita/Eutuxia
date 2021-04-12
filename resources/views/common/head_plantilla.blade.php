@@ -36,7 +36,7 @@
 <link rel="preload" as="script" href="{{asset('js/plantilla_js/vendor.min.js')}}" >
 {{-- precargas css  --}}
 <link rel="preload" as="style" href="{{asset('css/estilos_images_dinamicas.css')}}"/>
-<link rel="preload" as="style" href="{{asset('css/floating-wpp.css')}}">
+{{-- <link rel="preload" as="style" href="{{asset('css/floating-wpp.css')}}"> --}}
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Rubik:300,400,700">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,500,700">
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
