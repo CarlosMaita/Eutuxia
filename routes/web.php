@@ -134,16 +134,10 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 	Route::post('/cotizaciones/publicar/{id}', 'Cms\CotizacionController@publish')->name('cotizacion.publish');
 	Route::post('/cotizaciones/despublicar/{id}', 'Cms\CotizacionController@unpublish')->name('cotizacion.unpublish');
 
-});
-
-// Public quote routes (outside of cms middleware)
-Route::get('/cotizacion/{token}', 'Cms\CotizacionController@showPublic')->name('cotizacion.public');
-Route::get('/cotizacion/{token}/pdf', 'Cms\CotizacionController@downloadPdf')->name('cotizacion.pdf');
-
 	//-------------- BLOG ----------------
 
   
-  //------ CATEGORIAS ----------
+   //------ CATEGORIAS ----------
 
 	Route::get('/blog/categorias', 'Cms\blog\CategoryController@index')->name('blog.category');
 	Route::get('/blog/crear/categoria', 'Cms\blog\CategoryController@crearCategoria')->name('blog.category.create');
@@ -180,21 +174,16 @@ Route::get('/cotizacion/{token}/pdf', 'Cms\CotizacionController@downloadPdf')->n
 });
 
 
-
 Route::get('/', 'MainController@home')->name('home');
 
 Route::get('/contactanos', 'MainController@contactanos')->name('contactanos');
 Route::get('/gracias-por-contactarnos', 'MainController@contactanos')->name('gracias');
 
-
 Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contacto.send');
 
 Route::get('/blog', 'MainController@blog')->name('blog');
 Route::get('/blog/cat/{category_id}', 'MainController@blogCat')->name('blog.cat');
-
-Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show');
-
-
+Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show')
 
 Route::get('/productos/{id}', 'MainController@productos')->name('product.option');
 Route::get('/proyectos/{id}', 'MainController@proyectos')->name('project.option');
@@ -202,6 +191,11 @@ Route::get('/proyectos/{id}', 'MainController@proyectos')->name('project.option'
 Route::get('/nosotros', 'MainController@nosotros'  )->name('nosotros');
 //servicios
 Route::get('/servicios', 'MainController@servicios'  )->name('servicios');
+
+// Public quote routes (outside of cms middleware)
+Route::get('/cotizacion/{token}', 'Cms\CotizacionController@showPublic')->name('cotizacion.public');
+Route::get('/cotizacion/{token}/pdf', 'Cms\CotizacionController@downloadPdf')->name('cotizacion.pdf');
+
 
 Auth::routes();
 
