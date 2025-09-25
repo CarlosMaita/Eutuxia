@@ -119,10 +119,31 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 	Route::post('/banners/project/update/{id}', 'Cms\ProjectBannerController@actualizarBannerProyecto')->name('banner.project.update');
 	Route::post('/banners/project/delete/{id}', 'Cms\ProjectBannerController@eliminarBannersProject')->name('banner.project.destroy');
 
+	//-------------- COTIZACIONES ----------------
+	Route::get('/cotizaciones', 'Cms\CotizacionController@index')->name('cotizacion.home');
+	Route::get('/cotizaciones/archivadas', 'Cms\CotizacionController@archived')->name('cotizacion.archived');
+	Route::get('/cotizaciones/crear', 'Cms\CotizacionController@create')->name('cotizacion.create');
+	Route::get('/cotizaciones/editar/{id}', 'Cms\CotizacionController@edit')->name('cotizacion.edit');
+
+		//metodos posts
+	Route::post('/cotizaciones/guardar', 'Cms\CotizacionController@store')->name('cotizacion.store');
+	Route::post('/cotizaciones/actualizar/{id}', 'Cms\CotizacionController@update')->name('cotizacion.update');
+	Route::post('/cotizaciones/eliminar/{id}', 'Cms\CotizacionController@destroy')->name('cotizacion.delete');
+	Route::post('/cotizaciones/archivar/{id}', 'Cms\CotizacionController@archive')->name('cotizacion.archive');
+	Route::post('/cotizaciones/desarchivar/{id}', 'Cms\CotizacionController@unarchive')->name('cotizacion.unarchive');
+	Route::post('/cotizaciones/publicar/{id}', 'Cms\CotizacionController@publish')->name('cotizacion.publish');
+	Route::post('/cotizaciones/despublicar/{id}', 'Cms\CotizacionController@unpublish')->name('cotizacion.unpublish');
+
+});
+
+// Public quote routes (outside of cms middleware)
+Route::get('/cotizacion/{token}', 'Cms\CotizacionController@showPublic')->name('cotizacion.public');
+Route::get('/cotizacion/{token}/pdf', 'Cms\CotizacionController@downloadPdf')->name('cotizacion.pdf');
 
 	//-------------- BLOG ----------------
 
-			//------ CATEGORIAS ----------
+  
+  //------ CATEGORIAS ----------
 
 	Route::get('/blog/categorias', 'Cms\blog\CategoryController@index')->name('blog.category');
 	Route::get('/blog/crear/categoria', 'Cms\blog\CategoryController@crearCategoria')->name('blog.category.create');

@@ -1,5 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /cotizacion/
 Disallow: /cms/
-
 Sitemap: https://oxas.tech/sitemap.xml
