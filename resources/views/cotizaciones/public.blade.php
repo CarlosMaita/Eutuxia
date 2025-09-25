@@ -183,6 +183,9 @@
                 <div class="row align-items-center">
                     <div class="col-md-8">
                         <h1 class="mb-2">{{$cotizacion->nombre}}</h1>
+                        @if($cotizacion->nombre_cliente)
+                            <p class="mb-0">Cliente: <strong>{{$cotizacion->nombre_cliente}}</strong></p>
+                        @endif
                         <p class="mb-0">Creada por: <strong>{{$cotizacion->creador}}</strong></p>
                         <p class="mb-0">Fecha de vencimiento: <strong>{{$cotizacion->fecha->format('d/m/Y')}}</strong></p>
                     </div>

@@ -40,8 +40,8 @@
       </div>
       <div class="col-md-6">
         <div class="form-group">
-          <label for="creador">Creador *</label>
-          <input type="text" class="form-control" id="creador" name="creador" value="{{old('creador')}}" required maxlength="191">
+          <label for="nombre_cliente">Nombre del Cliente</label>
+          <input type="text" class="form-control" id="nombre_cliente" name="nombre_cliente" value="{{old('nombre_cliente')}}" maxlength="191">
         </div>
       </div>
     </div>
@@ -49,18 +49,35 @@
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
-          <label for="fecha">Fecha *</label>
-          <input type="date" class="form-control" id="fecha" name="fecha" value="{{old('fecha')}}" required>
+          <label for="creador">Creador *</label>
+          <input type="text" class="form-control" id="creador" name="creador" value="{{old('creador')}}" required maxlength="191">
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
+          <label for="fecha">Fecha de vencimiento *</label>
+          <input type="date" class="form-control" id="fecha" name="fecha" value="{{old('fecha')}}" required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
           <label for="estatus">Estatus *</label>
           <select class="form-control" id="estatus" name="estatus" required>
+            <option value="Borrador" {{old('estatus') == 'Borrador' ? 'selected' : ''}}>Borrador</option>
+            <option value="Pendiente" {{old('estatus') == 'Pendiente' ? 'selected' : 'selected'}}>Pendiente</option>
             <option value="Vencida" {{old('estatus') == 'Vencida' ? 'selected' : ''}}>Vencida</option>
             <option value="Aprobada" {{old('estatus') == 'Aprobada' ? 'selected' : ''}}>Aprobada</option>
             <option value="Rechazada" {{old('estatus') == 'Rechazada' ? 'selected' : ''}}>Rechazada</option>
           </select>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="tiempo_construccion">Tiempo de implementación</label>
+          <input type="text" class="form-control" id="tiempo_construccion" name="tiempo_construccion" value="{{old('tiempo_construccion')}}">
         </div>
       </div>
     </div>
@@ -91,7 +108,7 @@
     </div>
 
     <div class="form-group">
-      <label for="tiempo_construccion">Tiempo de Construcción</label>
+      <label for="tiempo_construccion">Tiempo de implementación</label>
       <input type="text" class="form-control" id="tiempo_construccion" name="tiempo_construccion" value="{{old('tiempo_construccion')}}">
     </div>
 
