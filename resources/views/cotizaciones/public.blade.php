@@ -28,6 +28,7 @@
             background: linear-gradient(135deg, #28a745, #20c997);
             color: white;
             padding: 2rem;
+            padding-bottom: 3rem;
             border-radius: 0.375rem 0.375rem 0 0;
             position: relative;
             overflow: hidden;
