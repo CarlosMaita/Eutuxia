@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Cms\Cotizacion;
 use App\Cms\CotizacionItem;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class CotizacionController extends Controller
 {
@@ -30,11 +31,12 @@ class CotizacionController extends Controller
     {
         $request->validate([
             'nombre' => 'required|max:191',
+            'nombre_cliente' => 'nullable|max:191',
             'creador' => 'required|max:191',
             'fecha' => 'required|date',
             'propuesta' => 'required',
             'descripcion' => 'required',
-            'estatus' => 'required|in:Rechazada,Vencida,Aprobada'
+            'estatus' => 'required|in:Borrador,Pendiente,Rechazada,Vencida,Aprobada'
         ]);
 
         $cotizacion = new Cotizacion($request->all());
@@ -73,11 +75,12 @@ class CotizacionController extends Controller
     {
         $request->validate([
             'nombre' => 'required|max:191',
+            'nombre_cliente' => 'nullable|max:191',
             'creador' => 'required|max:191',
             'fecha' => 'required|date',
             'propuesta' => 'required',
             'descripcion' => 'required',
-            'estatus' => 'required|in:Rechazada,Vencida,Aprobada'
+            'estatus' => 'required|in:Borrador,Pendiente,Rechazada,Vencida,Aprobada'
         ]);
 
         $cotizacion = Cotizacion::findOrFail($id);
@@ -174,14 +177,12 @@ class CotizacionController extends Controller
             ->where('publicada', true)
             ->firstOrFail();
 
-        // Generate PDF - using simple approach for now
-        $html = view('cotizaciones.pdf', compact('cotizacion'))->render();
+        // Generate PDF using DomPDF
+        $pdf = Pdf::loadView('cotizaciones.pdf', compact('cotizacion'));
         
-        // Set proper headers for PDF download
-        $filename = 'cotizacion-' . $cotizacion->id . '.html';
+        // Set filename
+        $filename = 'cotizacion-' . $cotizacion->id . '.pdf';
         
-        return response($html)
-            ->header('Content-Type', 'text/html')
-            ->header('Content-Disposition', 'attachment; filename="' . $filename . '"');
+        return $pdf->download($filename);
     }
 }

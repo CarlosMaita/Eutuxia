@@ -60,6 +60,8 @@
         .status-aprobada { background-color: #28a745; }
         .status-rechazada { background-color: #dc3545; }
         .status-vencida { background-color: #ffc107; color: #333; }
+        .status-borrador { background-color: #6c757d; }
+        .status-pendiente { background-color: #007bff; }
         .info-row {
             display: flex;
             justify-content: space-between;
@@ -86,7 +88,7 @@
     <!-- Header -->
     <div class="header">
         <h1>{{$cotizacion->nombre}}</h1>
-        <p>Creada por: {{$cotizacion->creador}} | Fecha: {{$cotizacion->fecha->format('d/m/Y')}}</p>
+        <p>Creada por: {{$cotizacion->creador}} | Fecha de vencimiento: {{$cotizacion->fecha->format('d/m/Y')}}</p>
         <span class="status-badge status-{{strtolower($cotizacion->estatus)}}">{{$cotizacion->estatus}}</span>
     </div>
 
