@@ -183,7 +183,7 @@ Route::post('/contacto/send', 'Cms\MessageController@sendMessage')->name('contac
 
 Route::get('/blog', 'MainController@blog')->name('blog');
 Route::get('/blog/cat/{category_id}', 'MainController@blogCat')->name('blog.cat');
-Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show')
+Route::get('/blog/{slug}', 'MainController@blogDetail')->name('blog.show');
 
 Route::get('/productos/{id}', 'MainController@productos')->name('product.option');
 Route::get('/proyectos/{id}', 'MainController@proyectos')->name('project.option');
