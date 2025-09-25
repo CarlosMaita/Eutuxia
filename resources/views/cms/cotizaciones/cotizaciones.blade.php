@@ -35,8 +35,9 @@
         <tr>
           <th>#</th>
           <th>Nombre</th>
+          <th>Cliente</th>
           <th>Creador</th>
-          <th>Fecha</th>
+          <th>Fecha de vencimiento</th>
           <th>Total</th>
           <th>Estatus</th>
           <th>Estado</th>
@@ -48,6 +49,7 @@
         <tr>
           <td>{{$cotizacion->id}}</td>
           <td>{{$cotizacion->nombre}}</td>
+          <td>{{$cotizacion->nombre_cliente ?: '-'}}</td>
           <td>{{$cotizacion->creador}}</td>
           <td>{{$cotizacion->fecha->format('d/m/Y')}}</td>
           <td>${{number_format($cotizacion->total, 2)}}</td>
@@ -55,6 +57,8 @@
             <span class="badge 
               @if($cotizacion->estatus == 'Aprobada') badge-success
               @elseif($cotizacion->estatus == 'Rechazada') badge-danger
+              @elseif($cotizacion->estatus == 'Borrador') badge-secondary
+              @elseif($cotizacion->estatus == 'Pendiente') badge-primary
               @else badge-warning
               @endif">
               {{$cotizacion->estatus}}

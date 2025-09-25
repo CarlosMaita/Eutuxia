@@ -60,6 +60,8 @@
         .status-aprobada { background-color: #28a745; }
         .status-rechazada { background-color: #dc3545; }
         .status-vencida { background-color: #ffc107; color: #333; }
+        .status-borrador { background-color: #6c757d; }
+        .status-pendiente { background-color: #007bff; }
         .info-row {
             display: flex;
             justify-content: space-between;
@@ -86,7 +88,10 @@
     <!-- Header -->
     <div class="header">
         <h1>{{$cotizacion->nombre}}</h1>
-        <p>Creada por: {{$cotizacion->creador}} | Fecha: {{$cotizacion->fecha->format('d/m/Y')}}</p>
+        <p>Creada por: {{$cotizacion->creador}} | Fecha de vencimiento: {{$cotizacion->fecha->format('d/m/Y')}}</p>
+        @if($cotizacion->nombre_cliente)
+            <p>Cliente: {{$cotizacion->nombre_cliente}}</p>
+        @endif
         <span class="status-badge status-{{strtolower($cotizacion->estatus)}}">{{$cotizacion->estatus}}</span>
     </div>
 
@@ -146,20 +151,21 @@
     <!-- Tiempo de construcción -->
     @if($cotizacion->tiempo_construccion)
     <div class="section">
-        <h2 class="section-title">Tiempo de Construcción</h2>
+        <h2 class="section-title">Tiempo de implementación</h2>
         <p>{{$cotizacion->tiempo_construccion}}</p>
     </div>
     @endif
 
     <!-- Total -->
     <div class="total-box">
-        Total: ${{number_format($cotizacion->total, 2)}}
+        Total: ${{number_format($cotizacion->total, 2)}} USD
     </div>
 
     <!-- Footer -->
     <div style="text-align: center; color: #666; margin-top: 40px; font-size: 12px;">
         <p>Esta cotización fue generada por Eutuxia Group</p>
         <p>Fecha de generación: {{$cotizacion->updated_at->format('d/m/Y H:i')}}</p>
+        <p><strong>Nota:</strong> Los precios mostrados están expresados en Dólares Americanos (USD).</p>
     </div>
 </body>
 </html>
