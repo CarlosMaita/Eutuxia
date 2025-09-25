@@ -128,6 +128,7 @@
             }
             .quote-header {
                 padding: 1.5rem;
+                padding-bottom: 3rem;
                 border-radius: 0;
             }
             .quote-content {
