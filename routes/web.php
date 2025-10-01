@@ -25,7 +25,7 @@ Route::get('/cms', function () {
 	}else{
 		return view('auth.login');
 	}
-})->name('login');
+	})->name('cms.home');
 
 
 Route::post('/login', 'LoginController@authenticate');
