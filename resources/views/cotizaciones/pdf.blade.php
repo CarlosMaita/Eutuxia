@@ -98,30 +98,26 @@
     <!-- Propuesta -->
     <div class="section">
         <h2 class="section-title">Propuesta</h2>
-        <p>{{$cotizacion->propuesta}}</p>
+        <div>{!! $cotizacion->propuesta !!}</div>
     </div>
 
     <!-- Descripción -->
     <div class="section">
         <h2 class="section-title">Descripción</h2>
-        <p>{{$cotizacion->descripcion}}</p>
+        <div>{!! $cotizacion->descripcion !!}</div>
     </div>
 
     <!-- Incluye / No incluye -->
-    @if($cotizacion->incluye || $cotizacion->no_incluye)
+    @if($cotizacion->incluye)
     <div class="section">
-        @if($cotizacion->incluye)
-        <h3>Qué incluye</h3>
-        <div class="alert alert-success">
-            {!! nl2br(e($cotizacion->incluye)) !!}
-        </div>
-        @endif
-        @if($cotizacion->no_incluye)
-        <h3>Qué NO incluye</h3>
-        <div class="alert alert-danger">
-            {!! nl2br(e($cotizacion->no_incluye)) !!}
-        </div>
-        @endif
+        <h2 class="section-title">Qué incluye</h2>
+        <div>{!! $cotizacion->incluye !!}</div>
+    </div>
+    @endif
+    @if($cotizacion->no_incluye)
+    <div class="section">
+        <h2 class="section-title">Qué NO incluye</h2>
+        <div>{!! $cotizacion->no_incluye !!}</div>
     </div>
     @endif
 

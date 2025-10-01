@@ -84,33 +84,30 @@
 
     <div class="form-group">
       <label for="propuesta">Propuesta *</label>
-      <textarea class="form-control" id="propuesta" name="propuesta" rows="4" required>{{old('propuesta', $cotizacion->propuesta)}}</textarea>
+      <textarea class="form-control ckeditor" id="propuesta" name="propuesta" rows="4" required>{{old('propuesta', $cotizacion->propuesta)}}</textarea>
     </div>
 
     <div class="form-group">
       <label for="descripcion">Descripción *</label>
-      <textarea class="form-control" id="descripcion" name="descripcion" rows="4" required>{{old('descripcion', $cotizacion->descripcion)}}</textarea>
+      <textarea class="form-control ckeditor" id="descripcion" name="descripcion" rows="4" required>{{old('descripcion', $cotizacion->descripcion)}}</textarea>
     </div>
 
     <div class="row">
       <div class="col-md-6">
         <div class="form-group">
           <label for="incluye">Qué incluye</label>
-          <textarea class="form-control" id="incluye" name="incluye" rows="3">{{old('incluye', $cotizacion->incluye)}}</textarea>
+          <textarea class="form-control ckeditor" id="incluye" name="incluye" rows="3">{{old('incluye', $cotizacion->incluye)}}</textarea>
         </div>
       </div>
       <div class="col-md-6">
         <div class="form-group">
           <label for="no_incluye">Qué NO incluye</label>
-          <textarea class="form-control" id="no_incluye" name="no_incluye" rows="3">{{old('no_incluye', $cotizacion->no_incluye)}}</textarea>
+          <textarea class="form-control ckeditor" id="no_incluye" name="no_incluye" rows="3">{{old('no_incluye', $cotizacion->no_incluye)}}</textarea>
         </div>
       </div>
     </div>
 
-    <div class="form-group">
-      <label for="tiempo_construccion">Tiempo de implementación</label>
-      <input type="text" class="form-control" id="tiempo_construccion" name="tiempo_construccion" value="{{old('tiempo_construccion', $cotizacion->tiempo_construccion)}}">
-    </div>
+    
 
     <!-- Items Section -->
     <div class="form-group">
@@ -158,6 +155,7 @@
 
 </section>
 
+<script src="{{ asset('js/ckeditor/ckeditor.js') }}"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     let itemCounter = 1;
