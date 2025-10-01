@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Cms\Cotizacion;
 use App\Cms\CotizacionItem;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Illuminate\Support\Str;
 
 class CotizacionController extends Controller
 {
@@ -170,6 +171,44 @@ class CotizacionController extends Controller
         $cotizacion->save();
 
         return back()->with('message', 'Cotización despublicada exitosamente');
+    }
+
+    /**
+     * Duplicate a quotation with its items
+     */
+    public function duplicate($id)
+    {
+        $original = Cotizacion::with('items')->findOrFail($id);
+
+        // Create a shallow copy with adjusted fields
+        $copy = $original->replicate([
+            // All fillable are copied by replicate by default; we'll adjust below
+        ]);
+
+        // Reset publishing/archive-related fields and dates
+    $copy->nombre = Str::limit($original->nombre . ' (Copia)', 191, '');
+        $copy->archivada = false;
+        $copy->publicada = false;
+        $copy->token_publico = null;
+    $copy->estatus = 'Borrador';
+        // Keep fecha the same by default; if you want today, uncomment next line
+        // $copy->fecha = now();
+
+        // Temporarily set total to 0; will recalc after creating items
+        $copy->total = 0;
+        $copy->push();
+
+        // Duplicate items maintaining order
+        foreach ($original->items as $item) {
+            $newItem = $item->replicate();
+            $newItem->cotizacion_id = $copy->id;
+            $newItem->save();
+        }
+
+        // Recalculate total
+        $copy->updateTotal();
+
+        return redirect()->route('cotizacion.edit', $copy->id)->with('message', 'Cotización duplicada. Ahora puedes editarla.');
     }
 
     public function showPublic($token)

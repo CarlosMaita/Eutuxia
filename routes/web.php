@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Cms\Product;
 use App\Cms\Service;
 use App\Cms\Project;
@@ -129,6 +130,8 @@ Route::prefix('cms')->middleware('auth')->group(function () {
 	Route::post('/cotizaciones/guardar', 'Cms\CotizacionController@store')->name('cotizacion.store');
 	Route::post('/cotizaciones/actualizar/{id}', 'Cms\CotizacionController@update')->name('cotizacion.update');
 	Route::post('/cotizaciones/eliminar/{id}', 'Cms\CotizacionController@destroy')->name('cotizacion.delete');
+	// duplicar
+	Route::post('/cotizaciones/duplicar/{id}', 'Cms\CotizacionController@duplicate')->name('cotizacion.duplicate');
 	Route::post('/cotizaciones/archivar/{id}', 'Cms\CotizacionController@archive')->name('cotizacion.archive');
 	Route::post('/cotizaciones/desarchivar/{id}', 'Cms\CotizacionController@unarchive')->name('cotizacion.unarchive');
 	Route::post('/cotizaciones/publicar/{id}', 'Cms\CotizacionController@publish')->name('cotizacion.publish');

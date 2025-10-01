@@ -79,6 +79,11 @@
               @if(!$cotizacion->archivada)
                 <a href="{{route('cotizacion.edit', $cotizacion->id)}}" class="btn btn-sm btn-outline-primary">Editar</a>
               @endif
+
+              <form action="{{route('cotizacion.duplicate', $cotizacion->id)}}" method="POST" class="d-inline">
+                @csrf
+                <button type="submit" class="btn btn-sm btn-outline-dark">Duplicar</button>
+              </form>
               
               @if($cotizacion->archivada)
                 <form action="{{route('cotizacion.unarchive', $cotizacion->id)}}" method="POST" class="d-inline">
