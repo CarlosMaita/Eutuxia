@@ -68,11 +68,18 @@ class CotizacionController extends Controller
     public function edit($id)
     {
         $cotizacion = Cotizacion::with('items')->findOrFail($id);
+        if ($cotizacion->archivada) {
+            return redirect()->route('cotizacion.home')->with('error', 'No se puede editar una cotización archivada.');
+        }
         return view('cms.cotizaciones.edit')->with(compact('cotizacion'));
     }
 
     public function update(Request $request, $id)
     {
+        $cotizacion = Cotizacion::findOrFail($id);
+        if ($cotizacion->archivada) {
+            return redirect()->route('cotizacion.home')->with('error', 'No se puede editar una cotización archivada.');
+        }
         $request->validate([
             'nombre' => 'required|max:191',
             'nombre_cliente' => 'nullable|max:191',
@@ -82,8 +89,6 @@ class CotizacionController extends Controller
             'descripcion' => 'required',
             'estatus' => 'required|in:Borrador,Pendiente,Rechazada,Vencida,Aprobada'
         ]);
-
-        $cotizacion = Cotizacion::findOrFail($id);
         $cotizacion->fill($request->all());
         $cotizacion->save();
 
@@ -125,6 +130,8 @@ class CotizacionController extends Controller
     {
         $cotizacion = Cotizacion::findOrFail($id);
         $cotizacion->archivada = true;
+        // Al archivar, no debe ser pública
+        $cotizacion->publicada = false;
         $cotizacion->save();
 
         return back()->with('message', 'Cotización archivada exitosamente');
@@ -142,6 +149,9 @@ class CotizacionController extends Controller
     public function publish($id)
     {
         $cotizacion = Cotizacion::findOrFail($id);
+        if ($cotizacion->archivada) {
+            return back()->with('error', 'No se puede publicar una cotización archivada.');
+        }
         
         if (!$cotizacion->token_publico) {
             $cotizacion->token_publico = $cotizacion->generatePublicToken();
@@ -166,6 +176,7 @@ class CotizacionController extends Controller
     {
         $cotizacion = Cotizacion::with('items')->where('token_publico', $token)
             ->where('publicada', true)
+            ->where('archivada', false)
             ->firstOrFail();
 
         return view('cotizaciones.public')->with(compact('cotizacion'));
@@ -175,6 +186,7 @@ class CotizacionController extends Controller
     {
         $cotizacion = Cotizacion::with('items')->where('token_publico', $token)
             ->where('publicada', true)
+            ->where('archivada', false)
             ->firstOrFail();
 
         // Generate PDF using DomPDF

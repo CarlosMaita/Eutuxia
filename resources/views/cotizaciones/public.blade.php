@@ -243,7 +243,7 @@
             <!-- Items -->
             @if($cotizacion->items && count($cotizacion->items) > 0)
             <div class="mb-4">
-                <h3 class="section-title">Desglose de Items</h3>
+                <h3 class="section-title">Detalle de cotización</h3>
                 <div class="items-table">
                     <div class="table-responsive">
                         <table class="table table-striped mb-0">

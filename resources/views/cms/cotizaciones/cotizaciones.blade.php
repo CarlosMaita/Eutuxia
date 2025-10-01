@@ -76,7 +76,9 @@
           </td>
           <td>
             <div class="btn-group" role="group">
-              <a href="{{route('cotizacion.edit', $cotizacion->id)}}" class="btn btn-sm btn-outline-primary">Editar</a>
+              @if(!$cotizacion->archivada)
+                <a href="{{route('cotizacion.edit', $cotizacion->id)}}" class="btn btn-sm btn-outline-primary">Editar</a>
+              @endif
               
               @if($cotizacion->archivada)
                 <form action="{{route('cotizacion.unarchive', $cotizacion->id)}}" method="POST" class="d-inline">
@@ -90,22 +92,26 @@
                 </form>
               @endif
 
-              @if($cotizacion->publicada)
-                <form action="{{route('cotizacion.unpublish', $cotizacion->id)}}" method="POST" class="d-inline">
-                  @csrf
-                  <button type="submit" class="btn btn-sm btn-outline-warning">Despublicar</button>
-                </form>
-                @if($cotizacion->token_publico)
-                  <a href="{{route('cotizacion.public', $cotizacion->token_publico)}}" target="_blank" class="btn btn-sm btn-outline-success">Ver Pública</a>
+              @if(!$cotizacion->archivada)
+                @if($cotizacion->publicada)
+                  <form action="{{route('cotizacion.unpublish', $cotizacion->id)}}" method="POST" class="d-inline">
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-outline-warning">Despublicar</button>
+                  </form>
+                  @if($cotizacion->token_publico)
+                    <a href="{{route('cotizacion.public', $cotizacion->token_publico)}}" target="_blank" class="btn btn-sm btn-outline-success">Ver Pública</a>
+                  @endif
+                @else
+                  <form action="{{route('cotizacion.publish', $cotizacion->id)}}" method="POST" class="d-inline">
+                    @csrf
+                    <button type="submit" class="btn btn-sm btn-outline-success">Publicar</button>
+                  </form>
                 @endif
-              @else
-                <form action="{{route('cotizacion.publish', $cotizacion->id)}}" method="POST" class="d-inline">
-                  @csrf
-                  <button type="submit" class="btn btn-sm btn-outline-success">Publicar</button>
-                </form>
               @endif
 
-              <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#deleteModal{{$cotizacion->id}}">Eliminar</button>
+              @if($cotizacion->archivada)
+                <button type="button" class="btn btn-sm btn-outline-danger" data-toggle="modal" data-target="#deleteModal{{$cotizacion->id}}">Eliminar</button>
+              @endif
             </div>
           </td>
         </tr>
@@ -118,6 +124,7 @@
 
 <!-- Delete Confirmation Modals -->
 @foreach($cotizaciones as $cotizacion)
+@if($cotizacion->archivada)
 <div class="modal fade" id="deleteModal{{$cotizacion->id}}" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel{{$cotizacion->id}}" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -140,6 +147,7 @@
     </div>
   </div>
 </div>
+@endif
 @endforeach
 
 @endsection
