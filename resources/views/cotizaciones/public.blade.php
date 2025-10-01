@@ -135,10 +135,13 @@
                 padding: 1.5rem;
             }
             .pdf-download {
-                position: static;
-                margin-top: 1rem;
-                width: 100%;
-                text-align: center;
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                left: auto;
+                width: auto;
+                margin: 0;
+                z-index: 1000;
             }
             .btn-floating {
                 width: 50px;
